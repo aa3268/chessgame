@@ -1,23 +1,24 @@
 package chess;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Vector;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.table.DefaultTableModel;
 
 public class MainMenu extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
 	private JButton btnNewButton_1;
 	static MainMenu frame;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -58,23 +59,31 @@ public class MainMenu extends JFrame {
 		btnNewButton.setBounds(277, 27, 89, 49);
 		contentPane.add(btnNewButton);
 		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setBounds(5, 5, 214, 251);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
 		btnNewButton_1 = new JButton("Log Out");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String[] args = null;
-				p.main(args);
+				LogIn.main(args);
 				frame.dispose();
 			}
 		});
+		Vector<Vector<String>> data = new Vector<Vector<String>>();
+		Vector<String> headers = new Vector<String>();
+		headers.add("Username");
+		headers.add("Wins");
+		headers.add("Losses");
+		headers.add("In Game");
+		
+		DefaultTableModel t = new DefaultTableModel(data, headers);
+		
 		btnNewButton_1.setBounds(277, 87, 89, 49);
 		contentPane.add(btnNewButton_1);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 11, 257, 239);
+		contentPane.add(scrollPane);
+		
+		table = new JTable(t);
+		scrollPane.setViewportView(table);
 	}
-
-
 }
