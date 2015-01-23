@@ -1,3 +1,5 @@
+//Comment
+
 package chess;
 import java.awt.EventQueue;
 import java.awt.GridLayout;
