@@ -1,9 +1,9 @@
 package chess;
-
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.print.PrinterException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -11,23 +11,24 @@ import java.net.URLConnection;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextPane;
-import java.awt.Color;
-import javax.swing.UIManager;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
 
-public class p extends JFrame {
+
+@SuppressWarnings("serial")
+public class LogIn extends JFrame {
 
 	private JPanel contentPane;
 	public final JTextField text;
 	public final JTextField text1;
-	public static p frame;
+	public static LogIn frame;
 	/**
 	 * Launch the application.
 	 */
@@ -35,7 +36,7 @@ public class p extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frame = new p();
+					frame = new LogIn();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,7 +48,7 @@ public class p extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public p() {
+	public LogIn() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 260, 300);
 		contentPane = new JPanel();
@@ -76,18 +77,30 @@ public class p extends JFrame {
 		lblNewLabel_1.setBounds(10, 88, 88, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		JButton btnNewButton_1 = new JButton("Create New User");
-		btnNewButton_1.setBounds(52, 227, 140, 23);
-		contentPane.add(btnNewButton_1);
+		JButton newUserButton = new JButton("Create New User");
+		newUserButton.setBackground(SystemColor.menu);
+		newUserButton.setFont(new Font("Arial", Font.BOLD, 10));
+		newUserButton.setBorder(BorderFactory.createEmptyBorder(2,2,2,2));
+		newUserButton.setBounds(52, 227, 140, 23);
+		newUserButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				frame.setVisible(false);
+				JFrame newUser = new JFrame();
+				newUser.setBounds(100,100,300,200);
+				newUser.setVisible(true);
+			}
+		});
+		contentPane.add(newUserButton);
 		
-		JTextArea textArea = new JTextArea();
+		final JTextArea textArea = new JTextArea();
 		textArea.setBackground(UIManager.getColor("Panel.background"));
 		textArea.setBounds(10, 144, 224, 72);
 		contentPane.add(textArea);
 		
 		JButton login = new JButton("Log In");
 		login.addActionListener(new ActionListener() {
-			Map<String,String> m = new HashMap();
+			Map<String,String> m = new HashMap<String, String>();
+			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent arg0) {
 				try{
 					URL oracle = new URL("https://www.cs.drexel.edu/~aa3268/userData");
@@ -120,10 +133,15 @@ public class p extends JFrame {
 				{
 					if(m.get(text.getText()).equals(text1.getText()))
 					{
-							MainMenu k = new MainMenu();
+						MainMenu k;
+						try {
+							k = new MainMenu(text.getText());
 							String[] args = null;
-							k.main(args);
+							k.main(args, text.getText());
 							frame.dispose();
+						} catch(Exception e){
+								e.printStackTrace();
+							}
 					}
 					else
 					{
