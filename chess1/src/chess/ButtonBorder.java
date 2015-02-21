@@ -296,10 +296,6 @@ public class ButtonBorder extends JPanel {
 		//p[7][0] = b;
 		
 		JButton KnW = new JButton("Kn");
-		KnW.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		add(KnW);	
 		KnW.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
