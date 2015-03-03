@@ -18,29 +18,31 @@ public class ButtonBorder extends JPanel {
 	  private static final int N = 8;
 	  private static final int SIZE = 75;
       
-	  public ButtonBorder() {
-		    super(new GridLayout(N, N));
-		        this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
+	  public ButtonBorder(int invited) {
+		super(new GridLayout(N, N));
+		this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
+		
 		Position[][] p = new Position[8][8];
+		
+	
 		setLayout(new GridLayout(0, 8, 0, 0));
 		
 		Piece b;
 		//Position s;
-		
 		JButton RB = new JButton("2");
 		add(RB);
 		b = new Piece();
 		b.button = RB;
 		b.color = "Black";
 		b.ident = "Rook";
-		//p[0][0] = b;
+		p[0][0].p = b;
 		JButton KnB = new JButton("3");
 		add(KnB);
 		b = new Piece();
 		b.button = KnB;
 		b.color = "Black";
 		b.ident = "Knight";
-		//p[0][1] = b;
+		p[0][1] = b;
 		
 		JButton BB = new JButton("4");
 		add(BB);
@@ -48,7 +50,7 @@ public class ButtonBorder extends JPanel {
 		b.button = BB;
 		b.color = "Black";
 		b.ident = "Bishop";
-		//p[0][2] = b;
+		p[0][2] = b;
 
 		JButton QB = new JButton("5");
 		add(QB);
@@ -56,7 +58,7 @@ public class ButtonBorder extends JPanel {
 		b = new Piece();
 		b.color = "Black";
 		b.ident = "Queen";
-		//p[0][3] = b;
+		p[0][3] = b;
 		
 		JButton KB = new JButton("6");
 		add(KB);
@@ -64,7 +66,7 @@ public class ButtonBorder extends JPanel {
 		b = new Piece();
 		b.color = "Black";
 		b.ident = "King";
-		//p[0][3] = b;
+		p[0][3] = b;
 		
 		JButton BB_1 = new JButton("4");
 		add(BB_1);
@@ -72,7 +74,7 @@ public class ButtonBorder extends JPanel {
 		b = new Piece();
 		b.color = "Black";
 		b.ident = "Bishop";
-		//p[0][5] = b;
+		p[0][5] = b;
 		
 		JButton KnB_1 = new JButton("3");
 		add(KnB_1);
@@ -80,7 +82,7 @@ public class ButtonBorder extends JPanel {
 		b.button = KnB_1;
 		b.color = "Black";
 		b.ident = "Knight";
-		//p[0][6] = b;
+		p[0][6] = b;
 		
 		JButton RB_1 = new JButton("2");
 		add(RB_1);
@@ -88,7 +90,7 @@ public class ButtonBorder extends JPanel {
 		b.button = RB_1;
 		b.color = "Black";
 		b.ident = "Rook";
-		//p[0][7] = b;
+		p[0][7] = b;
 		
 		
 		JButton PB_1 = new JButton("1");
@@ -237,7 +239,7 @@ public class ButtonBorder extends JPanel {
 		b.button = PW_2;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][1] = b;
+		p[6][1] = b;
 		
 		JButton PW_3 = new JButton("P");
 		add(PW_3);
@@ -245,7 +247,7 @@ public class ButtonBorder extends JPanel {
 		b.button = PW_3;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][2] = b;
+		p[6][2] = b;
 		
 		JButton PW_4 = new JButton("P");
 		add(PW_4);
@@ -253,7 +255,7 @@ public class ButtonBorder extends JPanel {
 		b.button = PW_4;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][3] = b;
+		p[6][3] = b;
 		
 		JButton PW_5 = new JButton("P");
 		add(PW_5);
@@ -261,7 +263,7 @@ public class ButtonBorder extends JPanel {
 		b.button = PW_5;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][4] = b;
+		p[6][4] = b;
 		
 		JButton PW_6 = new JButton("P");
 		add(PW_6);
@@ -269,7 +271,7 @@ public class ButtonBorder extends JPanel {
 		b.button = PW_6;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][5] = b;
+		p[6][5] = b;
 		
 		JButton PW_7 = new JButton("P");
 		add(PW_7);
@@ -277,7 +279,7 @@ public class ButtonBorder extends JPanel {
 		b.button = PW_7;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][6] = b;
+		p[6][6] = b;
 		
 		JButton PW_8 = new JButton("P");
 		add(PW_8);
@@ -285,7 +287,7 @@ public class ButtonBorder extends JPanel {
 		b.button = PW_8;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][7] = b;
+		p[6][7] = b;
 		
 		JButton RW = new JButton("R");
 		add(RW);
@@ -293,12 +295,13 @@ public class ButtonBorder extends JPanel {
 		b.button = RW;
 		b.color = "White";
 		b.ident = "Rook";
-		//p[7][0] = b;
+		p[7][0] = b;
 		
 		JButton KnW = new JButton("Kn");
 		add(KnW);	
 		KnW.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(invited == 1)
 				Piece b = new Piece();
 				b.button = KnW;
 				b.color = "White";
@@ -321,7 +324,7 @@ public class ButtonBorder extends JPanel {
 		b.button = BW;
 		b.color = "White";
 		b.ident = "Bishop";
-		//p[7][2] = b;
+		p[7][2] = b;
 		
 		JButton QW = new JButton("Q");
 		add(QW);
@@ -329,7 +332,7 @@ public class ButtonBorder extends JPanel {
 		b.button = QW;
 		b.color = "White";
 		b.ident = "Queen";
-		//p[7][3] = b;
+		p[7][3] = b;
 		
 		JButton KW = new JButton("K");
 		add(KW);
@@ -337,7 +340,7 @@ public class ButtonBorder extends JPanel {
 		b.button = KW;
 		b.color = "White";
 		b.ident = "King";
-		//p[7][4] = b;
+		p[7][4] = b;
 		
 		JButton BW_1 = new JButton("B");
 		add(BW_1);
@@ -345,7 +348,7 @@ public class ButtonBorder extends JPanel {
 		b.button = BW_1;
 		b.color = "White";
 		b.ident = "Bishop";
-		//p[7][5] = b;
+		p[7][5] = b;
 		
 		JButton KnW_1 = new JButton("Kn");
 		add(KnW_1);
@@ -353,7 +356,7 @@ public class ButtonBorder extends JPanel {
 		b.button = KnW_1;
 		b.color = "White";
 		b.ident = "Knight";
-		//p[7][6] = b;
+		p[7][6] = b;
 		
 		JButton RW_1 = new JButton("R");
 		add(RW_1);
@@ -361,7 +364,7 @@ public class ButtonBorder extends JPanel {
 		b.button = RW_1;
 		b.color = "White";
 		b.ident = "Rook";
-		//p[7][7] = b;
+		p[7][7] = b;
 		
 	
 	}
