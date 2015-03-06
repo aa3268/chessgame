@@ -21,7 +21,7 @@ public class ButtonBorder extends JPanel {
 	  public ButtonBorder() {
 		    super(new GridLayout(N, N));
 		        this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
-		Position[][] p = new Position[8][8];
+		final Position[][] p = new Position[8][8];
 		setLayout(new GridLayout(0, 8, 0, 0));
 		
 		Piece b;
@@ -44,7 +44,7 @@ public class ButtonBorder extends JPanel {
 		
 		JButton BB = new JButton("4");
 		add(BB);
-		b = new Piece();
+		b = new Bishop();
 		b.button = BB;
 		b.color = "Black";
 		b.ident = "Bishop";
@@ -69,7 +69,7 @@ public class ButtonBorder extends JPanel {
 		JButton BB_1 = new JButton("4");
 		add(BB_1);
 		b.button = BB_1;
-		b = new Piece();
+		b = new Bishop();
 		b.color = "Black";
 		b.ident = "Bishop";
 		//p[0][5] = b;
@@ -211,7 +211,7 @@ public class ButtonBorder extends JPanel {
 		JButton e32 = new JButton("");
 		add(e32);
 		
-		JButton PW_1 = new JButton("P");
+		final JButton PW_1 = new JButton("P");
 		add(PW_1);
 	
 		PW_1.addActionListener(new ActionListener() {
@@ -289,13 +289,13 @@ public class ButtonBorder extends JPanel {
 		
 		JButton RW = new JButton("R");
 		add(RW);
-		b = new Piece();
+		b = new Rook();
 		b.button = RW;
 		b.color = "White";
 		b.ident = "Rook";
 		//p[7][0] = b;
 		
-		JButton KnW = new JButton("Kn");
+		final JButton KnW = new JButton("Kn");
 		KnW.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -321,31 +321,52 @@ public class ButtonBorder extends JPanel {
 		
 		JButton BW = new JButton("B");
 		add(BW);
-		b = new Piece();
+		b = new Bishop();
 		b.button = BW;
 		b.color = "White";
 		b.ident = "Bishop";
 		//p[7][2] = b;
 		
-		JButton QW = new JButton("Q");
+		final JButton QW = new JButton("Q");
 		add(QW);
-		b = new Piece();
-		b.button = QW;
+		/*b.button = QW;
 		b.color = "White";
 		b.ident = "Queen";
-		//p[7][3] = b;
+		//p[7][3] = b;*/
+
+		// FOR TESTING
+		QW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		add(QW);	
+		QW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Piece b = new Piece();
+				b.button = QW;
+				b.color = "White";
+				b.ident = "Queen";
+				
+				Position s = new Position();
+				s.y = 1;
+				s.x = 4;
+				s.p = b;
+				p[4][1] = s;
+			
+				getPositions(s);
+			}
+		});
 		
-		JButton KW = new JButton("K");
+		final JButton KW = new JButton("K");
 		add(KW);
-		b = new Piece();
-		b.button = KW;
+		/*b.button = KW;
 		b.color = "White";
 		b.ident = "King";
-		//p[7][4] = b;
+		//p[7][4] = b;*/
 		
 		JButton BW_1 = new JButton("B");
 		add(BW_1);
-		b = new Piece();
+		b = new Bishop();
 		b.button = BW_1;
 		b.color = "White";
 		b.ident = "Bishop";
@@ -361,7 +382,7 @@ public class ButtonBorder extends JPanel {
 		
 		JButton RW_1 = new JButton("R");
 		add(RW_1);
-		b = new Piece();
+		b = new Rook();
 		b.button = RW_1;
 		b.color = "White";
 		b.ident = "Rook";
@@ -412,7 +433,6 @@ public class ButtonBorder extends JPanel {
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
 
-            @Override
             public void run() {
             	/*ButtonBorder frame = new ButtonBorder();
    
@@ -453,6 +473,7 @@ public class ButtonBorder extends JPanel {
 				spot.x = s.x;
 				s.p.available.add(spot);
 				System.out.println(s.p.available.size());
+				
 				spot = new Position();
 				spot.y = 5;
 				spot.x = s.x;
@@ -469,7 +490,30 @@ public class ButtonBorder extends JPanel {
 	
 			break;
 		case("Rook"):
-			
+			spot = new Position();
+			for(int i = s.y; i < 8; i++){
+				spot.x = s.x;
+				spot.y = i+1;
+				s.p.available.add(spot);
+			}
+			spot = new Position();
+			for(int i = s.y; i > -1; i--){
+				spot.x = s.x;
+				spot.y = i;
+				s.p.available.add(spot);
+			}
+			spot = new Position();
+			for(int i = s.x; i < 8; i++){
+				spot.y = s.y;
+				spot.x = i+1;
+				s.p.available.add(spot);
+			}
+			spot = new Position();
+			for(int i = s.x; i > -1; i--){
+				spot.y = s.y;
+				spot.x = i;
+				s.p.available.add(spot);
+			}
 			break;
 		case("Knight"):
 			spot = new Position();
@@ -479,6 +523,7 @@ public class ButtonBorder extends JPanel {
 			{
 				s.p.available.add(spot);
 			}
+			
 			spot = new Position();
 			spot.y = s.y - 2;
 			spot.x = s.x + 1;
@@ -489,7 +534,34 @@ public class ButtonBorder extends JPanel {
 			
 			break;
 		case("Bishop"):
-			
+			//Southeast diagonal
+			spot = new Position();
+			for(int i = s.x+1, j = s.y+1; i < 8 && j < 8; i++, j++){
+				spot.x = i;
+				spot.y = j;
+				s.p.available.add(spot);
+			}
+			//Northeast diagonal
+			spot = new Position();
+			for(int i = s.x+1, j = s.y-1; i < 8 && j > -1; i++, j--){
+				spot.x = i;
+				spot.y = j;
+				s.p.available.add(spot);
+			}
+			//Northwest diagonal
+			spot = new Position();
+			for(int i = s.x-1, j = s.y-1; i > -1 && j > -1; i--, j--){
+				spot.x = i;
+				spot.y = j;
+				s.p.available.add(spot);
+			}
+			//Southwest diagonal
+			spot = new Position();
+			for(int i = s.x-1, j = s.y+1; i > -1 && j < 8; i--, j++){
+				spot.x = i;
+				spot.y = j;
+				s.p.available.add(spot);
+			}
 			break;
 		case("Queen"):
 			
