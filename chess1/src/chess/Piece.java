@@ -1,6 +1,5 @@
 package chess;
 
-
 /*
  * Piece class
  * Each piece has a color, an identifier
@@ -17,7 +16,12 @@ public class Piece {
 	public String ident;
 	public JButton button;
 	public Vector<Position> available; //This will be used to modify the board to highlight available positions and disable others
-	
-	
 
+	//Gets the color of the piece
+	public String getColor(){
+		return null;
+	};
+	
+	public void possibleMove(Position s) {
+	}
 }
