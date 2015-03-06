@@ -327,13 +327,37 @@ public class ButtonBorder extends JPanel {
 		b.ident = "Bishop";
 		//p[7][2] = b;
 		
-		JButton QW = new JButton("Q");
+		final JButton QW = new JButton("Q");
 		add(QW);
-		b = new Piece();
+		/*b = new Piece();
 		b.button = QW;
 		b.color = "White";
 		b.ident = "Queen";
-		//p[7][3] = b;
+		//p[7][3] = b;*/
+		
+		// FOR TESTING
+		QW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		add(QW);	
+		QW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Piece b = new Piece();
+				b.button = QW;
+				b.color = "White";
+				b.ident = "Queen";
+				
+				Position s = new Position();
+				s.y = 1;
+				s.x = 4;
+				s.p = b;
+				p[4][1] = s;
+			
+				getPositions(s);
+			}
+		});
+		
 		
 		final JButton KW = new JButton("K");
 		add(KW);
@@ -517,65 +541,10 @@ public class ButtonBorder extends JPanel {
 			
 			break;
 		case("Queen"):
-			
+			Queen.getPositions(s);
 			break;
 		case("King"):
-			spot = new Position();	// North
-			spot.y = s.y +1;
-			spot.x = s.x ;
-			if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1)){
-				s.p.available.add(spot);
-			}
-		
-			spot = new Position();	// NorthEast
-			spot.y = s.y + 1;
-			spot.x = s.x + 1;
-			if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 0) && (spot.x != 0) ){
-				s.p.available.add(spot);
-			}
-			
-			spot = new Position();	// East
-			spot.y = s.y;
-			spot.x = s.x + 1;
-			if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 0) && (spot.x != 0)){
-				s.p.available.add(spot);
-			}
-			
-			spot = new Position();	// SouthEast
-			spot.y = s.y - 1;
-			spot.x = s.x + 1;
-			if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 0) && (spot.x != 0)){
-				s.p.available.add(spot);
-			}
-			
-			spot = new Position();	// South 
-			spot.y = s.y - 1;
-			spot.x = s.x;
-			if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 0) && (spot.x != 0)){
-				s.p.available.add(spot);
-			}
-			
-			spot = new Position();	// SouthWest 
-			spot.y = s.y - 1;
-			spot.x = s.x - 1;
-			if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 0) && (spot.x != 0)){
-				s.p.available.add(spot);
-			}
-			
-			spot = new Position();	// West 
-			spot.y = s.y;
-			spot.x = s.x - 1;
-			if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 0) && (spot.x != 0)){
-				s.p.available.add(spot);
-			}
-			
-			spot = new Position();	// NorthWest 
-			spot.y = s.y + 1;
-			spot.x = s.x - 1;
-			if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 0) && (spot.x != 0)){
-				s.p.available.add(spot);
-			}
-			
+			King.getPositions(s);
 			break;
 		
 		

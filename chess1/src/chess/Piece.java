@@ -17,10 +17,5 @@ public class Piece {
 	public String ident;
 	public JButton button;
 	public Vector<Position> available; //This will be used to modify the board to highlight available positions and disable others
-	
-	/*public boolean captured(){
-		
-	}*/
-	
 
 }
