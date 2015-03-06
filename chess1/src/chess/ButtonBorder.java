@@ -21,7 +21,7 @@ public class ButtonBorder extends JPanel {
 	  public ButtonBorder() {
 		    super(new GridLayout(N, N));
 		        this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
-		Position[][] p = new Position[8][8];
+		final Position[][] p = new Position[8][8];
 		setLayout(new GridLayout(0, 8, 0, 0));
 		
 		Piece b;
@@ -295,7 +295,7 @@ public class ButtonBorder extends JPanel {
 		b.ident = "Rook";
 		//p[7][0] = b;
 		
-		JButton KnW = new JButton("Kn");
+		final JButton KnW = new JButton("Kn");
 		KnW.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -327,21 +327,70 @@ public class ButtonBorder extends JPanel {
 		b.ident = "Bishop";
 		//p[7][2] = b;
 		
-		JButton QW = new JButton("Q");
+		final JButton QW = new JButton("Q");
 		add(QW);
-		b = new Piece();
+		/*b = new Piece();
 		b.button = QW;
 		b.color = "White";
 		b.ident = "Queen";
-		//p[7][3] = b;
+		//p[7][3] = b;*/
 		
-		JButton KW = new JButton("K");
+		// FOR TESTING
+		QW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		add(QW);	
+		QW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Piece b = new Piece();
+				b.button = QW;
+				b.color = "White";
+				b.ident = "Queen";
+				
+				Position s = new Position();
+				s.y = 1;
+				s.x = 4;
+				s.p = b;
+				p[4][1] = s;
+			
+				getPositions(s);
+			}
+		});
+		
+		
+		final JButton KW = new JButton("K");
 		add(KW);
-		b = new Piece();
+		/*b = new Piece();
 		b.button = KW;
 		b.color = "White";
-		b.ident = "King";
+		b.ident = "King";*/
 		//p[7][4] = b;
+		
+		// FOR TESTING
+		KW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		add(KW);	
+		KW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Piece b = new Piece();
+				b.button = KW;
+				b.color = "White";
+				b.ident = "King";
+				
+				Position s = new Position();
+				s.y = 1;
+				s.x = 5;
+				s.p = b;
+				p[5][1] = s;
+			
+				getPositions(s);
+			}
+		});
+		
+		
 		
 		JButton BW_1 = new JButton("B");
 		add(BW_1);
@@ -492,10 +541,10 @@ public class ButtonBorder extends JPanel {
 			
 			break;
 		case("Queen"):
-			
+			Queen.getPositions(s);
 			break;
 		case("King"):
-			
+			King.getPositions(s);
 			break;
 		
 		

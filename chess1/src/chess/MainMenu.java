@@ -43,7 +43,11 @@ public class MainMenu extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+<<<<<<< HEAD
 	public static void main(String[] args, String username) {
+=======
+	public static void main(String[] args, final String username) {
+>>>>>>> origin/leapat
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
