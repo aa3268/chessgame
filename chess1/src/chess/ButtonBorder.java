@@ -18,6 +18,8 @@ import javax.swing.JPanel;
 public class ButtonBorder extends JPanel {
 	  private static final int N = 8;
 	  private static final int SIZE = 76;
+	  
+	  public char turn = 'W';
 	  Position[][] p = new Position[8][8];
 	  
 	  Position one;
@@ -54,7 +56,7 @@ public class ButtonBorder extends JPanel {
 		p[0][0].p = b;
 		
 		pos_00.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {		
+			public void actionPerformed(ActionEvent arg0) {	
 				PossibleMoves(0,0);
 				}
 			});
@@ -1305,8 +1307,9 @@ public class ButtonBorder extends JPanel {
 	
 	public void PossibleMoves(int y, int x)
 	{
-		if(!p[y][x].p.ident.equals("Empty"))
+		if(!p[y][x].p.ident.equals("Empty") && (turn == p[y][x].p.color.charAt(0)))
 		{
+			
 			Position s = new Position();
 			s = p[y][x];
 			
@@ -1321,6 +1324,14 @@ public class ButtonBorder extends JPanel {
 				{
 					two = s;
 					Swap(one, two);
+					if(turn == 'W')
+					{
+						turn = 'B';
+					}
+					else
+					{
+						turn = 'W';
+					}
 				
 				}
 				if(one == s)
@@ -1345,6 +1356,14 @@ public class ButtonBorder extends JPanel {
 			{
 				two = s;
 				Swap(one,two);
+				if(turn == 'W')
+				{
+					turn = 'B';
+				}
+				else
+				{
+					turn = 'W';
+				}
 			}
 			
 		}
