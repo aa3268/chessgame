@@ -2,133 +2,116 @@ package chess;
 
 import java.util.Vector;
 
+/*
+ * Graph Layout:
+ * 
+	0
+	1
+	2
+	3
+	4
+	5
+	6
+	7/0 1 2 3 4 5 6 7
+ *
+ */
+
 public class Queen extends Piece{
+	
+	public String getColor(){
+		return this.color;
+	}
 
 	public static void getPositions(Position s)
 	{
 		s.p.available = new Vector<Position>();
-			
-		// pt to increment or decrement
-		Position spt = new Position();	
-		spt.y = s.y;
-		spt.x = s.x ;
-		System.out.println("queen " + s.x +" "+s.y);
-		// North
-		while (spt.y > 0){
-			spt.y--;
-			Position spot = new Position();	
-			spot.x = spt.x;
-			spot.y = spt.y;
+		
+		// -----------------  Bishop Moves  ------------------------
+		
+		//Southeast diagonal
+		for(int i = s.x+1, j = s.y+1; i < 8 && j < 8; i++, j++){
+			Position spot = new Position();
+			spot.x = i;
+			spot.y = j;
 			s.p.available.add(spot);
+			System.out.println("bishop:southeast: "+"x="+spot.x+" y="+spot.y);
 		}
-		
-		spt.y = s.y;
-		spt.x = s.x ;
-		// South
-		while (spt.y < 7){
-			spt.y++;
-			Position spot = new Position();	
-			spot.x = spt.x;
-			spot.y = spt.y;
+		//Southwest diagonal
+		for(int i = s.x-1, j = s.y+1; i > -1 && j < 8; i--, j++){
+			Position spot = new Position();
+			spot.x = i;
+			spot.y = j;
 			s.p.available.add(spot);
+			System.out.println("bishop:southwest: "+"x="+spot.x+" y="+spot.y);
+		}
+		//Northeast diagonal
+		for(int i = s.x+1, j = s.y-1; i < 8 && j > -1; i++, j--){
+			Position spot = new Position();
+			spot.x = i;
+			spot.y = j;
+			s.p.available.add(spot);
+			System.out.println("bishop:northeast: "+"x="+spot.x+" y="+spot.y);
+		}
+		//Northwest diagonal
+		for(int i = s.x-1, j = s.y-1; i > -1 && j > -1; i--, j--){
+			Position spot = new Position();
+			spot.x = i;
+			spot.y = j;
+			s.p.available.add(spot);
+			System.out.println("bishop:northwest: "+"x="+spot.x+" y="+spot.y);
 		}
 		
-		// iterate up
-		while (spt.x < 7){		// while spot is on chessboard
-			// Queen can make either a rook or bishop move
-			// East
-			if(spt.x < 7){
-				spt.x++;
-				Position spot = new Position();	
-				spot.x = spt.x ;
-				spot.y = s.y;
-				// Rook move if X2 == X1 or Y2 == Y1
-				if((spot.y == s.y) || (spot.x==s.x)){
-					s.p.available.add(spot);
-				}
-				else{
-					spt.x--;	// reverse increment
-				}
-			}
-			
-			// NorthEast
-			if(spt.y > 0){
-				spt.y--;
-				Position spot2 = new Position();	
-				spot2.x = spt.x ;
-				spot2.y = spt.y;
-				if(Math.abs(spt.y-s.y) == Math.abs(spt.x-s.x)){
-					s.p.available.add(spot2);
-				}
-				else{
-					spt.y++;	// reverse increment
-				}
-			}
-			// SouthEast diagonal
-			if(spt.y < 7){
-				spt.y++;
-				Position spot2 = new Position();	
-				spot2.x = spt.x ;
-				spot2.y = spt.y;
-				if(Math.abs(spt.y-s.y) == Math.abs(spt.x-s.x)){
-					s.p.available.add(spot2);
-				}	
-				else{
-					spt.y--;	// reverse decrement
-				}
-			}
+		
+		
+		// -----------------  Rook Moves  ------------------------
+		Position spot = new Position();
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		// All North
+		while(spot.y > 0){
+			Position spotValid = new Position();
+			spotValid.x = spot.x;
+			spotValid.y = --spot.y;
+			s.p.available.add(spotValid);
+			System.out.println("rook:north: "+"x="+spotValid.x+" y="+spotValid.y);
 		}
 		
-		// reset
-		spt.y = s.y;
-		spt.x = s.x;
-		// iterate down
-		while (spt.x > 0){		// while spot is on chessboard
-			// Queen can make either a rook or bishop move
-			// West
-			if(spt.x > 0){
-				spt.x--;
-				Position spot = new Position();	
-				spot.x = spt.x ;
-				spot.y = s.y;
-				
-				// Rook move if X2 == X1 or Y2 == Y1
-				if((spot.y == s.y) || (spot.x==s.x)){
-					s.p.available.add(spot);
-				}
-				else{
-					spt.x++;	// reverse decrement
-				}
-			}
-			// NorthWest
-			if(spt.y > 0){
-				spt.y--;
-				Position spot2 = new Position();	
-				spot2.x = spt.x;
-				spot2.y = spt.y;
-				if(Math.abs(spt.y-s.y) == Math.abs(spt.x-s.x)){
-					s.p.available.add(spot2);
-				}
-				else{
-					spt.y++;	// reverse increment
-				}
-			}
-			
-			// SouthWest 
-			if(spt.y < 7){
-				spt.y++;
-				Position spot2 = new Position();	
-				spot2.x = spt.x ;
-				spot2.y = spt.y;
-				if(Math.abs(spt.y-s.y) == Math.abs(spt.x-s.x)){
-					s.p.available.add(spot2);
-				}
-				else{
-					spt.y--;	// reverse decrement
-				}
-			}
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All South
+		while(spot.y < 7){
+			Position spotValid = new Position();
+			spotValid.x = spot.x;
+			spotValid.y = ++spot.y;
+			s.p.available.add(spotValid);
+			System.out.println("rook:south: "+"x="+spotValid.x+" y="+spotValid.y);
 		}
-		 
+		
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All East
+		while(spot.x < 7){
+			Position spotValid = new Position();
+			spotValid.x = ++spot.x;
+			spotValid.y = spot.y;
+			s.p.available.add(spotValid);
+			System.out.println("rook:east: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All West
+		while (spot.x > 0){
+			Position spotValid = new Position();
+			spotValid.x = --spot.x;
+			spotValid.y = spot.y;
+			s.p.available.add(spotValid);
+			System.out.println("rook:west: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
 	}
-		
 }

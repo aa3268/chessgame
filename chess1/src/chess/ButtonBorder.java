@@ -376,10 +376,10 @@ public class ButtonBorder extends JPanel {
 				b.ident = "Queen";
 				
 				Position s = new Position();
-				s.y = 1;
-				s.x = 4;
+				s.y = 7;
+				s.x = 3;
 				s.p = b;
-				p[4][1] = s;
+				p[7][3] = s;
 			
 				getPositions(s);
 			}
@@ -408,10 +408,10 @@ public class ButtonBorder extends JPanel {
 				b.ident = "King";
 				
 				Position s = new Position();
-				s.y = 1;
-				s.x = 5;
+				s.y = 7;
+				s.x = 4;
 				s.p = b;
-				p[5][1] = s;
+				p[7][4] = s;
 			
 				getPositions(s);
 			}
@@ -578,6 +578,7 @@ public class ButtonBorder extends JPanel {
 				King.getPositions(s);
 				break;
 		}
+		System.out.println("");
 		for(int i = 0; i < s.p.available.size(); i++)
 		{
 			if(s.p.available.size() != 0)
