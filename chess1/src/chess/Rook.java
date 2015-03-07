@@ -29,6 +29,7 @@ public class Rook extends Piece{
 		
 		s.p.available = new Vector<Position>();
 		
+		s.p.available.addElement(s);
 		//All North
 		while(spot.y > 0){
 			Position spotValid = new Position();

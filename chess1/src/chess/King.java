@@ -2,25 +2,7 @@ package chess;
 
 import java.util.Vector;
 
-/*
- * Graph Layout:
- * 
-	0
-	1
-	2
-	3
-	4
-	5
-	6
-	7/0 1 2 3 4 5 6 7
- *
- */
-
 public class King extends Piece{
-	
-	public String getColor(){
-		return this.color;
-	}
 	
 	public static void getPositions(Position s)
 	{

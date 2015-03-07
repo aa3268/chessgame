@@ -92,7 +92,7 @@ public class LogIn extends JFrame {
 		});
 		contentPane.add(newUserButton);
 		
-		final JTextArea textArea = new JTextArea();
+		JTextArea textArea = new JTextArea();
 		textArea.setBackground(UIManager.getColor("Panel.background"));
 		textArea.setBounds(10, 144, 224, 72);
 		contentPane.add(textArea);
@@ -141,6 +141,7 @@ public class LogIn extends JFrame {
 							frame.dispose();
 						} catch(Exception e){
 								e.printStackTrace();
+								
 							}
 					}
 					else

@@ -26,7 +26,7 @@ public class Bishop extends Piece{
 	{
 		Position spot;
 		s.p.available = new Vector<Position>();
-		
+		s.p.available.addElement(s);
 		//Southeast diagonal
 		spot = new Position();
 		for(int i = s.x+1, j = s.y+1; i < 8 && j < 8; i++, j++){

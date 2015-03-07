@@ -4,8 +4,6 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Map;
 import java.util.Vector;
 
 import javax.swing.JButton;
@@ -16,23 +14,25 @@ import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import org.apache.commons.codec.binary.Base64;
+import org.json.JSONObject;
+import org.json.XML;
 
 import com.temboo.Library.FilesAnywhere.AccountLogin;
 import com.temboo.Library.FilesAnywhere.AccountLogin.AccountLoginInputSet;
 import com.temboo.Library.FilesAnywhere.AccountLogin.AccountLoginResultSet;
+import com.temboo.Library.FilesAnywhere.DeleteItem;
+import com.temboo.Library.FilesAnywhere.DeleteItem.DeleteItemInputSet;
 import com.temboo.Library.FilesAnywhere.DownloadBase64EncodedFile;
 import com.temboo.Library.FilesAnywhere.DownloadBase64EncodedFile.DownloadBase64EncodedFileInputSet;
-import com.temboo.Library.FilesAnywhere.DownloadBase64EncodedFile.DownloadBase64EncodedFileResultSet;
 import com.temboo.Library.FilesAnywhere.ListItems;
 import com.temboo.Library.FilesAnywhere.ListItems.ListItemsInputSet;
 import com.temboo.Library.FilesAnywhere.ListItems.ListItemsResultSet;
 import com.temboo.Library.FilesAnywhere.UploadFile;
 import com.temboo.Library.FilesAnywhere.UploadFile.UploadFileInputSet;
-import com.temboo.Library.FilesAnywhere.UploadFile.UploadFileResultSet;
 import com.temboo.core.TembooException;
 import com.temboo.core.TembooSession;
 
+@SuppressWarnings("serial")
 public class MainMenu extends JFrame {
 
 	private JPanel contentPane;
@@ -43,7 +43,7 @@ public class MainMenu extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args, final String username) {
+	public static void main(String[] args, String username) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -60,6 +60,8 @@ public class MainMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public MainMenu(String username) throws TembooException, UnsupportedEncodingException {
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		
 		
 		TembooSession session = new TembooSession("aa3268", "myFirstApp", "522716fffec34ab1961d61113bea0f34");
@@ -109,13 +111,13 @@ public class MainMenu extends JFrame {
 		uploadFileInputs.set_Path(path);
 
 		// Execute Choreo
-		//UploadFileResultSet uploadFileResults = uploadFileChoreo.execute(uploadFileInputs);
-		
+		uploadFileChoreo.execute(uploadFileInputs);
+		//System.out.println(uploadFileResults.getCompletionStatus());
 		//String encode = Base64.encodeBase64(username.getBytes());
 	
 		
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -124,6 +126,7 @@ public class MainMenu extends JFrame {
 		
 		JButton btnNewButton = new JButton("Invite");
 		btnNewButton.addActionListener(new ActionListener() {
+			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent arg0) {
 				ButtonBorder k = new ButtonBorder();
 				String[] args = null;
@@ -137,6 +140,29 @@ public class MainMenu extends JFrame {
 		btnNewButton_1 = new JButton("Log Out");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				DeleteItem deleteItemChoreo = new DeleteItem(session);
+				
+				// Get an InputSet object for the choreo
+				DeleteItemInputSet deleteItemInputs = deleteItemChoreo.newInputSet();
+
+				// Set credential to use for execution
+				deleteItemInputs.set_APIKey("F9C7C969-540D-43DD-B03E-2982BC411237");
+				deleteItemInputs.set_OrgID("50");
+				deleteItemInputs.set_Token(accountLoginResults.get_Token());
+				
+				String path = "AA3268\\users\\";
+				path += username + ".txt";
+				deleteItemInputs.set_Path(path);
+				// Set inputs
+
+				// Execute Choreo
+				try {
+					deleteItemChoreo.execute(deleteItemInputs);
+				} catch (TembooException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 				String[] args = null;
 				LogIn.main(args);
 				frame.dispose();
@@ -153,14 +179,27 @@ public class MainMenu extends JFrame {
 		// Set inputs
 		listItemsInputs.set_APIKey("F9C7C969-540D-43DD-B03E-2982BC411237");
 		listItemsInputs.set_OrgID("50");
-		listItemsInputs.set_Token("EEANI7NJIXFGF0JYRP41H9HFIA1V0C9BX1LE7G623499");
-		listItemsInputs.set_Path("\\AA3268\\users\\");
+		listItemsInputs.set_Token(accountLoginResults.get_Token());
+		listItemsInputs.set_Path("\\AA3268\\");
 
 		// Execute Choreo
-		//ListItemsResultSet listItemsResults = listItemsChoreo.execute(listItemsInputs);
-		//listItemsResults.
+		ListItemsResultSet listItemsResults = listItemsChoreo.execute(listItemsInputs);
+		listItemsResults.get_Response();
+		System.out.println(listItemsResults.get_Response());
 		
 		
+		//Convert XML to JSON
+		 int PRETTY_PRINT_INDENT_FACTOR = 4;
+		 String XML_STRING = listItemsResults.get_Response();
+		 try{
+			JSONObject xmlJSONObj = XML.toJSONObject(XML_STRING);
+        	String jsonPrettyPrintString = xmlJSONObj.toString(PRETTY_PRINT_INDENT_FACTOR);
+        	System.out.println(jsonPrettyPrintString);
+		 }catch(Exception e)
+		 {
+			 e.printStackTrace();
+		 }
+		      		
 		Vector<String> headers = new Vector<String>();
 		
 		headers.add("Username");

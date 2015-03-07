@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -16,465 +17,1174 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class ButtonBorder extends JPanel {
 	  private static final int N = 8;
-	  private static final int SIZE = 75;
-      
+	  private static final int SIZE = 76;
+	  Position[][] p = new Position[8][8];
+	  
+	  Position one;
+	  Position two;
+	  
+	  boolean cancel = false;
 	  public ButtonBorder() {
-		    super(new GridLayout(N, N));
-		        this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
-		final Position[][] p = new Position[8][8];
-		setLayout(new GridLayout(0, 8, 0, 0));
+		  //GridLayout gridLayout = new GridLayout(N, N);
+		 
+		  this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
+		
+		setLayout(new GridLayout(0, 8, 8, 8));
 		
 		Piece b;
 		//Position s;
+		for(int x = 0; x < 8; x++)
+		{
+			for(int y = 0; y < 8; y++)
+			{
+				p[x][y] = new Position();
+			}
+		}
 		
-		JButton RB = new JButton("2");
-		add(RB);
+		JButton pos_00 = new JButton("");
+		pos_00.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_rook.png")));
+		add(pos_00);
 		b = new Piece();
-		b.button = RB;
+		b.button = pos_00;
 		b.color = "Black";
 		b.ident = "Rook";
-		//p[0][0] = b;
-		JButton KnB = new JButton("3");
-		add(KnB);
+		
+		p[0][0].x = 0;
+		p[0][0].y = 0;
+		p[0][0].p = b;
+		
+		pos_00.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(0,0);
+				}
+			});
+		
+		JButton pos_01 = new JButton("");
+		pos_01.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_knight.png")));
+		add(pos_01);
 		b = new Piece();
-		b.button = KnB;
+		b.button = pos_01;
 		b.color = "Black";
 		b.ident = "Knight";
-		//p[0][1] = b;
 		
-		JButton BB = new JButton("4");
-		add(BB);
+		p[0][1].x = 1;
+		p[0][1].y = 0;
+		p[0][1].p = b;
+		
+		pos_01.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(0,1);
+				}
+			});
+		
+		JButton pos_02 = new JButton("");
+		pos_02.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_bishop.png")));
+		add(pos_02);
 		b = new Piece();
-		b.button = BB;
+		b.button = pos_02;
 		b.color = "Black";
 		b.ident = "Bishop";
-		//p[0][2] = b;
+		
+		p[0][2].x = 2;
+		p[0][2].y = 0;
+		p[0][2].p = b;
+		
+		pos_02.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(0,2);
+				}
+			});
 
-		JButton QB = new JButton("5");
-		add(QB);
-		b.button = QB;
+		JButton pos_03 = new JButton("");
+		pos_03.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_queen.png")));
+		add(pos_03);
 		b = new Piece();
+		b.button = pos_03;
 		b.color = "Black";
 		b.ident = "Queen";
-		//p[0][3] = b;
 		
-		JButton KB = new JButton("6");
-		add(KB);
-		b.button = KB;
+		p[0][3].x = 3;
+		p[0][3].y = 0;
+		p[0][3].p = b;
+		
+		pos_03.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(0,3);
+				}
+			});
+		
+		JButton pos_04 = new JButton("");
+		pos_04.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_king.png")));
+		add(pos_04);
 		b = new Piece();
+		b.button = pos_04;
 		b.color = "Black";
 		b.ident = "King";
-		//p[0][3] = b;
 		
-		JButton BB_1 = new JButton("4");
-		add(BB_1);
-		b.button = BB_1;
+		p[0][4].x = 4;
+		p[0][4].y = 0;
+		p[0][4].p = b;
+		
+		pos_04.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(0,4);
+				}
+			});
+		
+		JButton pos_05 = new JButton("");
+		pos_05.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_bishop.png")));
+		add(pos_05);
 		b = new Piece();
+		b.button = pos_05;
 		b.color = "Black";
 		b.ident = "Bishop";
-		//p[0][5] = b;
 		
-		JButton KnB_1 = new JButton("3");
-		add(KnB_1);
+		p[0][5].x = 5;
+		p[0][5].y = 0;
+		p[0][5].p = b;
+		
+		pos_05.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(0,5);
+				}
+			});
+	
+		JButton pos_06 = new JButton("");
+		pos_06.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_knight.png")));
+		add(pos_06);
 		b = new Piece();
-		b.button = KnB_1;
+		b.button = pos_06;
 		b.color = "Black";
 		b.ident = "Knight";
-		//p[0][6] = b;
 		
-		JButton RB_1 = new JButton("2");
-		add(RB_1);
+		p[0][6].x = 6;
+		p[0][6].y = 0;
+		p[0][6].p = b;
+		
+		pos_06.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(0,6);
+				}
+			});
+		
+		JButton pos_07 = new JButton("");
+		pos_07.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_rook.png")));
+		add(pos_07);
 		b = new Piece();
-		b.button = RB_1;
+		b.button = pos_07;
 		b.color = "Black";
 		b.ident = "Rook";
-		//p[0][7] = b;
+		
+		p[0][7].x = 7;
+		p[0][7].y = 0;
+		p[0][7].p = b;
+		
+		pos_07.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(0,7);
+				}
+			});
 		
 		
-		JButton PB_1 = new JButton("1");
-		add(PB_1);
+		JButton pos_10 = new JButton("");
+		pos_10.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_pawn.png")));
+		add(pos_10);
+		b = new Piece();
+		b.ident = "Pawn";
+		b.color = "Black";
+		b.button = pos_10;
 		
-		JButton PB_2 = new JButton("1");
-		add(PB_2);
+		p[1][0].x = 0;
+		p[1][0].y = 1;
+		p[1][0].p = b;
+		
+		pos_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(1,0);
+				}
+			});
+		
+		JButton pos_11 = new JButton("");
+		pos_11.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_pawn.png")));
+		add(pos_11);
+		b = new Piece();
+		b.ident = "Pawn";
+		b.color = "Black";
+		b.button = pos_11;
+		
+		p[1][1].x = 1;
+		p[1][1].y = 1;
+		p[1][1].p = b;
+		
+		pos_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(1,1);
+				}
+			});
 	
-		JButton PB_3 = new JButton("1");
-		add(PB_3);
+		JButton pos_12 = new JButton("");
+		pos_12.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_pawn.png")));
+		add(pos_12);
+		b = new Piece();
+		b.ident = "Pawn";
+		b.color = "Black";
+		b.button = pos_12;
 		
-		JButton PB_4 = new JButton("1");
-		add(PB_4);
+		p[1][2].x = 2;
+		p[1][2].y = 1;
+		p[1][2].p = b;
 		
-		JButton PB_5 = new JButton("1");
-		add(PB_5);
+		pos_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(1,2);
+				}
+			});
+		
+		JButton pos_13 = new JButton("");
+		pos_13.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_pawn.png")));
+		add(pos_13);
+		b = new Piece();
+		b.ident = "Pawn";
+		b.color = "Black";
+		b.button = pos_13;
+		
+		p[1][3].x = 3;
+		p[1][3].y = 1;
+		p[1][3].p = b;
+		
+		
+		pos_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(1,3);
+				}
+			});
+		
+		JButton pos_14 = new JButton("");
+		pos_14.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_pawn.png")));
+		add(pos_14);
+		b = new Piece();
+		b.ident = "Pawn";
+		b.color = "Black";
+		b.button = pos_14;
+		
+		p[1][4].x = 4;
+		p[1][4].y = 1;
+		p[1][4].p = b;
+		
+		pos_14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(1,4);
+				}
+			});
 	
-		JButton PB_6 = new JButton("1");
-		add(PB_6);
+		JButton pos_15 = new JButton("");
+		pos_15.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_pawn.png")));
+		add(pos_15);
+		b = new Piece();
+		b.ident = "Pawn";
+		b.color = "Black";
+		b.button = pos_15;
+		
+		p[1][5].x = 5;
+		p[1][5].y = 1;
+		p[1][5].p = b;
+		
+		pos_15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(1,5);
+				}
+			});
 	
-		JButton PB_7 = new JButton("1");
-		add(PB_7);
+		JButton pos_16 = new JButton("");
+		pos_16.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_pawn.png")));
+		add(pos_16);
+		b = new Piece();
+		b.ident = "Pawn";
+		b.color = "Black";
+		b.button = pos_16;
 		
-		JButton PB_8 = new JButton("1");
-		add(PB_8);
+		p[1][6].x = 6;
+		p[1][6].y = 1;
+		p[1][6].p = b;
+		
+		pos_16.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(1,6);
+				}
+			});
+		
+		JButton pos_17 = new JButton("");
+		pos_17.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_pawn.png")));
+		add(pos_17);
+		b = new Piece();
+		b.ident = "Pawn";
+		b.color = "Black";
+		b.button = pos_17;
+		
+		p[1][7].x = 7;
+		p[1][7].y = 1;
+		p[1][7].p = b;
+		
+		pos_17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(1,7);
+				}
+			});
 	
 		
-		JButton e1 = new JButton("");
-		add(e1);
+		JButton pos_20 = new JButton("");
+		pos_20.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_20);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_20;
 		
-		JButton e2 = new JButton("");
-		add(e2);
+		p[2][0].x = 0;
+		p[2][0].y = 2;
+		p[2][0].p = b;
 		
-		JButton e3 = new JButton("");
-		add(e3);
 		
-		JButton e4 = new JButton("");
-		add(e4);
+		pos_20.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(2,0);
+				}
+			});
 		
-		JButton e5 = new JButton("");
-		add(e5);
+		JButton pos_21 = new JButton("");
+		pos_21.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_21);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_21;
 		
-		JButton e6 = new JButton("");
-		add(e6);
+		p[2][1].x = 1;
+		p[2][1].y = 2;
+		p[2][1].p = b;
 		
-		JButton e7 = new JButton("");
-		add(e7);
 		
-		JButton e8 = new JButton("");
-		add(e8);
+		pos_21.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(2,1);
+				}
+			});
 		
-		JButton e9 = new JButton("");
-		add(e9);
+		JButton pos_22 = new JButton("");
+		pos_22.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_22);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_22;
 		
-		JButton e10 = new JButton("");
-		add(e10);
+		p[2][2].x = 2;
+		p[2][2].y = 2;
+		p[2][2].p = b;
 		
-		JButton e11 = new JButton("");
-		add(e11);
+		pos_22.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(2,2);
+				}
+			});
 		
-		JButton e12 = new JButton("");
-		add(e12);
+		JButton pos_23 = new JButton("");
+		pos_23.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_23);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_23;
 		
-		JButton e13 = new JButton("");
-		add(e13);
+		p[2][3].x = 3;
+		p[2][3].y = 2;
+		p[2][3].p = b;
 		
-		JButton e14 = new JButton("");
-		add(e14);
+		pos_23.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(2,3);
+				}
+			});
 		
-		JButton e15 = new JButton("");
-		add(e15);
+		JButton pos_24 = new JButton("");
+		pos_24.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_24);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_24;
 		
-		JButton e16 = new JButton("");
-		add(e16);
+		p[2][4].x = 4;
+		p[2][4].y = 2;
+		p[2][4].p = b;
 		
-		JButton e17 = new JButton("");
-		add(e17);
+		pos_24.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(2,4);
+				}
+			});
 		
-		JButton e18 = new JButton("");
-		add(e18);
+		JButton pos_25 = new JButton("");
+		pos_25.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_25);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_25;
 		
-		JButton e19 = new JButton("");
-		add(e19);
+		p[2][5].x = 5;
+		p[2][5].y = 2;
+		p[2][5].p = b;
 		
-		JButton e20 = new JButton("");
-		add(e20);
+		pos_25.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(2,5);
+				}
+			});
 		
-		JButton e21 = new JButton("");
-		add(e21);
+		JButton pos_26 = new JButton("");
+		pos_26.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_26);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_26;
 		
-		JButton e22 = new JButton("");
-		add(e22);
+		p[2][6].x = 6;
+		p[2][6].y = 2;
+		p[2][6].p = b;
 		
-		JButton e23 = new JButton("");
-		add(e23);
+		pos_26.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(2,6);
+				}
+			});
 		
-		JButton e24 = new JButton("");
-		add(e24);
+		JButton pos_27 = new JButton("");
+		pos_27.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_27);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_27;
 		
-		JButton e25 = new JButton("");
-		add(e25);
+		p[2][7].x = 7;
+		p[2][7].y = 2;
+		p[2][7].p = b;
 		
-		JButton e26 = new JButton("");
-		add(e26);
 		
-		JButton e27 = new JButton("");
-		add(e27);
+		pos_27.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(2,7);
+				}
+			});
 		
-		JButton e28 = new JButton("");
-		add(e28);
-		
-		JButton e29 = new JButton("");
-		add(e29);
-		
-		JButton e30 = new JButton("");
-		add(e30);
-		
-		JButton e31 = new JButton("");
-		add(e31);
-		JButton e32 = new JButton("");
-		add(e32);
-		
-		final JButton PW_1 = new JButton("P");
-		add(PW_1);
+		JButton pos_30 = new JButton("");
+		pos_30.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_30);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_30;
 	
-		PW_1.addActionListener(new ActionListener() {
+		p[3][0].x = 0;
+		p[3][0].y = 3;
+		p[3][0].p = b;
+		
+		
+		pos_30.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(3,0);
+				}
+			});
+		
+		JButton pos_31 = new JButton("");
+		pos_31.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_31);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_31;
+		
+		p[3][1].x = 1;
+		p[3][1].y = 3;
+		p[3][1].p = b;
+		
+		pos_31.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(3,1);
+				}
+			});
+		
+		JButton pos_32 = new JButton("");
+		pos_32.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_32);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_32;
+		
+		p[3][2].x = 2;
+		p[3][2].y = 3;
+		p[3][2].p = b;
+		
+		pos_32.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(3,2);
+				}
+			});
+		
+		JButton pos_33 = new JButton("");
+		pos_33.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_33);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_33;
+		
+		p[3][3].x = 3;
+		p[3][3].y = 3;
+		p[3][3].p = b;
+		
+		pos_33.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(3,3);
+				}
+			});
+		
+		JButton pos_34 = new JButton("");
+		pos_34.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_34);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_34;
+		
+		p[3][4].x = 4;
+		p[3][4].y = 3;
+		p[3][4].p = b;
+		
+		pos_34.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(3,4);
+				}
+			});
+		
+		JButton pos_35 = new JButton("");
+		pos_35.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_35);
+		b = new Piece();
+		b.ident = "Empty";
+		b.color = "Empty";
+		b.button = pos_35;
+		
+		p[3][5].x = 5;
+		p[3][5].y = 3;
+		p[3][5].p = b;
+		
+		pos_35.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(3,5);
+				}
+			});
+		
+		JButton pos_36 = new JButton("");
+		pos_36.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_36);
+		b = new Piece();
+		b.button = pos_36;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[3][6].x = 6;
+		p[3][6].y = 3;
+		p[3][6].p = b;
+		
+		pos_36.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(3,6);
+				}
+			});
+		
+		JButton pos_37 = new JButton("");
+		pos_37.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_37);
+		b = new Piece();
+		b.button = pos_37;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[3][7].x = 7;
+		p[3][7].y = 3;
+		p[3][7].p = b;
+		
+		pos_37.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(3,7);
+				}
+			});
+		
+		JButton pos_40 = new JButton("");
+		pos_40.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_40);
+		b = new Piece();
+		b.button = pos_40;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[4][0].x = 0;
+		p[4][0].y = 4;
+		p[4][0].p = b;
+		
+		pos_40.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(4,0);
+				}
+			});
+		
+		
+		
+		
+		
+		JButton pos_41 = new JButton("");
+		pos_41.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_41);
+		b = new Piece();
+		b.button = pos_41;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[4][1].x = 1;
+		p[4][1].y = 4;
+		p[4][1].p = b;
+		pos_41.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(4,1);
+				}
+			});
+		
+		
+		JButton pos_42 = new JButton("");
+		pos_42.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_42);
+		b = new Piece();
+		b.button = pos_42;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[4][2].x = 2;
+		p[4][2].y = 4;
+		p[4][2].p = b;
+		pos_42.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(4,2);
+				}
+			});
+		
+		
+		JButton pos_43 = new JButton("");
+		pos_43.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_43);
+		b = new Piece();
+		b.button = pos_43;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[4][3].x = 3;
+		p[4][3].y = 4;
+		p[4][3].p = b;
+		pos_43.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(4,3);
+				}
+			});
+		
+		
+		JButton pos_44 = new JButton("");
+		pos_44.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_44);
+		b = new Piece();
+		b.button = pos_44;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[4][4].x = 4;
+		p[4][4].y = 4;
+		p[4][4].p = b;
+		pos_44.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(4,4);
+				}
+			});
+		
+		
+		JButton pos_45 = new JButton("");
+		pos_45.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_45);
+		b = new Piece();
+		b.button = pos_45;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[4][5].x = 5;
+		p[4][5].y = 4;
+		p[4][5].p = b;
+		pos_45.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(4,5);
+				}
+			});
+		
+		
+		
+		JButton pos_46 = new JButton("");
+		pos_46.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_46);
+		b = new Piece();
+		b.button = pos_46;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[4][6].x = 6;
+		p[4][6].y = 4;
+		p[4][6].p = b;
+		pos_46.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(4,6);
+				}
+			});
+		
+		JButton pos_47 = new JButton("");
+		pos_47.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_47);
+		b = new Piece();
+		b.button = pos_47;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[4][7].x = 7;
+		p[4][7].y = 4;
+		p[4][7].p = b;
+		pos_47.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(4,7);
+				}
+			});
+		
+		JButton pos_50 = new JButton("");
+		pos_50.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_50);
+		b = new Piece();
+		b.button = pos_50;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		
+		p[5][0].x = 0;
+		p[5][0].y = 5;
+		p[5][0].p = b;
+		pos_50.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				PossibleMoves(5,0);
+			}
+		});
+		
+		
+		JButton pos_51 = new JButton("");
+		pos_51.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_51);
+		b = new Piece();
+		b.button = pos_51;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[5][1].x = 1;
+		p[5][1].y = 5;
+		p[5][1].p = b;
+		
+		pos_51.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) 
+			{
+				PossibleMoves(5,1);
+			}
+		});
+		
+		
+		JButton pos_52 = new JButton("");
+		pos_52.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_52);
+		b = new Piece();
+		b.button = pos_52;
+		b.ident = "Empty";
+		b.color = "Empty";
+		
+		p[5][2].x = 2;
+		p[5][2].y = 5;
+		p[5][2].p = b;
+		pos_52.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(5,2);
+				}
+			});
+		
+		
+		JButton pos_53 = new JButton("");
+		pos_53.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_53);
+		b = new Piece();
+		b.button = pos_53;
+		b.ident = "Empty";
+		b.color = "Empty";
+		p[5][3].x = 3;
+		p[5][3].y = 5;
+		p[5][3].p = b;
+		pos_53.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(5,3);
+				}
+			});
+		
+		JButton pos_54 = new JButton("");
+		pos_54.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_54);
+		b = new Piece();
+		b.button = pos_54;
+		b.ident = "Empty";
+		b.color = "Empty";
+		p[5][4].x = 4;
+		p[5][4].y = 5;
+		p[5][4].p = b;
+		pos_54.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(5,4);
+				}
+			});
+		
+		JButton pos_55 = new JButton("");
+		pos_55.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_55);
+		b = new Piece();
+		b.button = pos_55;
+		b.ident = "Empty";
+		b.color = "Empty";
+		p[5][5].x = 5;
+		p[5][5].y = 5;
+		p[5][5].p = b;
+		pos_55.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(5,5);
+				}
+			});
+		
+		JButton pos_56 = new JButton("");
+		pos_56.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_56);
+		b = new Piece();
+		b.button = pos_56;
+		b.ident = "Empty";
+		b.color = "Empty";
+		p[5][6].x = 6;
+		p[5][6].y = 5;
+		p[5][6].p = b;
+		pos_56.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(5,6);
+				}
+			});
+		
+		JButton pos_57 = new JButton("");
+		pos_57.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		add(pos_57);
+		b = new Piece();
+		b.button = pos_57;
+		b.ident = "Empty";
+		b.color = "Empty";
+		p[5][7].x = 7;
+		p[5][7].y = 5;
+		p[5][7].p = b;
+		pos_57.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(5,7);
+				}
+			});
+		
+		JButton pos_60 = new JButton("");
+		pos_60.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_pawn.png")));
+		add(pos_60);
+		b = new Piece();
+		b.button = pos_60;
+		b.color = "White";
+		b.ident = "Pawn";
+		p[6][0].x = 0;
+		p[6][0].y = 6;
+		p[6][0].p = b;
+		
+		pos_60.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {		
+			PossibleMoves(6,0);	
+			}
+		});
+		
+		JButton pos_61 = new JButton("");
+		pos_61.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_pawn.png")));
+		add(pos_61);
+		b = new Piece();
+		b.button = pos_61;
+		b.color = "White";
+		b.ident = "Pawn";
+		p[6][1].x = 1;
+		p[6][1].y = 6;
+		p[6][1].p = b;
+		
+		pos_61.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Piece b = new Piece();
-				b.button = PW_1;
-				b.color = "White";
-				b.ident = "Pawn";
-				
-				Position s = new Position();
-				s.y = 6;
-				s.x = 0;
-				s.p = b;
-				p[6][0] = s;
-				getPositions(s);
-				
+				PossibleMoves(6,1);	
 			}
 		});
 		
-		JButton PW_2 = new JButton("P");
-		add(PW_2);
+		JButton pos_62 = new JButton("");
+		pos_62.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_pawn.png")));
+		add(pos_62);
 		b = new Piece();
-		b.button = PW_2;
+		b.button = pos_62;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][1] = b;
+		p[6][2].x = 2;
+		p[6][2].y = 6;
+		p[6][2].p = b;
 		
-		JButton PW_3 = new JButton("P");
-		add(PW_3);
+		pos_62.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(6,2);	
+				}
+			});
+		
+		JButton pos_63 = new JButton("");
+		pos_63.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_pawn.png")));
+		add(pos_63);
 		b = new Piece();
-		b.button = PW_3;
+		b.button = pos_63;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][2] = b;
+		p[6][3].x = 3;
+		p[6][3].y = 6;
+		p[6][3].p = b;
 		
-		JButton PW_4 = new JButton("P");
-		add(PW_4);
+		
+		pos_63.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(6,3);
+				}
+			});
+		
+		JButton pos_64 = new JButton("");
+		pos_64.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_pawn.png")));
+		add(pos_64);
 		b = new Piece();
-		b.button = PW_4;
+		b.button = pos_64;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][3] = b;
+		p[6][4].x = 4;
+		p[6][4].y = 6;
+		p[6][4].p = b;
+		pos_64.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(6,4);
+				}
+			});
 		
-		JButton PW_5 = new JButton("P");
-		add(PW_5);
+		JButton pos_65 = new JButton("");
+		pos_65.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_pawn.png")));
+		add(pos_65);
 		b = new Piece();
-		b.button = PW_5;
+		b.button = pos_65;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][4] = b;
+		p[6][5].x = 5;
+		p[6][5].y = 6;
+		p[6][5].p = b;
+		pos_65.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(6,5);	
+				}
+			});
 		
-		JButton PW_6 = new JButton("P");
-		add(PW_6);
+		JButton pos_66 = new JButton("");
+		pos_66.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_pawn.png")));
+		add(pos_66);
 		b = new Piece();
-		b.button = PW_6;
+		b.button = pos_66;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][5] = b;
+		p[6][6].x = 6;
+		p[6][6].y = 6;
+		p[6][6].p = b;
+		pos_66.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {		
+				PossibleMoves(6,6);
+			}});
 		
-		JButton PW_7 = new JButton("P");
-		add(PW_7);
+		JButton pos_67 = new JButton("");
+		pos_67.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_pawn.png")));
+		add(pos_67);
 		b = new Piece();
-		b.button = PW_7;
+		b.button = pos_67;
 		b.color = "White";
 		b.ident = "Pawn";
-		//p[6][6] = b;
-		
-		JButton PW_8 = new JButton("P");
-		add(PW_8);
-		b = new Piece();
-		b.button = PW_8;
-		b.color = "White";
-		b.ident = "Pawn";
-		//p[6][7] = b;
-		
-		final JButton RW = new JButton("R");
-		add(RW);
-		RW.addActionListener(new ActionListener() {
+		p[6][7].x = 7;
+		p[6][7].y = 6;
+		p[6][7].p = b;
+		pos_67.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		add(RW);	
-		RW.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Piece b = new Piece();
-				b.button = RW;
-				b.color = "White";
-				b.ident = "Rook";
+				PossibleMoves(6,7);
 				
-				Position s = new Position();
-				s.y = 7;
-				s.x = 0;
-				s.p = b;
-				p[7][0] = s;
-			
-				getPositions(s);
 			}
 		});
 		
-		final JButton KnW = new JButton("Kn");
-		KnW.addActionListener(new ActionListener() {
+		
+		JButton pos_70 = new JButton("");
+		pos_70.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_rook.png")));
+		add(pos_70);
+		b = new Piece();
+		b.button = pos_70;
+		b.color = "White";
+		b.ident = "Rook";
+		p[7][0].x = 0;
+		p[7][0].y = 7;
+		p[7][0].p = b;
+		pos_70.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		add(KnW);	
-		KnW.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Piece b = new Piece();
-				b.button = KnW;
-				b.color = "White";
-				b.ident = "Knight";
+				PossibleMoves(7,0);
 				
-				Position s = new Position();
-				s.y = 7;
-				s.x = 1;
-				s.p = b;
-				p[7][1] = s;
-			
-				getPositions(s);
 			}
 		});
 		
 		
-		JButton BW = new JButton("B");
-		add(BW);
-		BW.addActionListener(new ActionListener() {
+		
+		
+		JButton pos_71 = new JButton("");
+		pos_71.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_knight.png")));
+		add(pos_71);	
+		b = new Piece();
+		b.button = pos_71;
+		b.color = "White";
+		b.ident = "Knight";
+		p[7][1].x = 1;
+		p[7][1].y = 7;
+		p[7][1].p = b;
+		pos_71.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Piece b = new Piece();
-				b.button = RW;
-				b.color = "White";
-				b.ident = "Bishop";
+				PossibleMoves(7,1);
 				
-				Position s = new Position();
-				s.y = 7;
-				s.x = 2;
-				s.p = b;
-				p[7][2] = s;
-			
-				getPositions(s);
 			}
 		});
 		
-		final JButton QW = new JButton("Q");
-		add(QW);
-		/*b = new Piece();
-		b.button = QW;
+		
+		JButton pos_72 = new JButton("");
+		pos_72.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_bishop.png")));
+		add(pos_72);
+		b = new Piece();
+		b.button = pos_72;
+		b.color = "White";
+		b.ident = "Bishop";
+		p[7][2].x = 2;
+		p[7][2].y = 7;
+		p[7][2].p = b;
+		pos_72.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PossibleMoves(7,2);
+				
+			}
+		});
+		
+		JButton pos_73 = new JButton("");
+		pos_73.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_queen.png")));
+		add(pos_73);
+		b = new Piece();
+		b.button = pos_73;
 		b.color = "White";
 		b.ident = "Queen";
-		//p[7][3] = b;*/
-		
-		// FOR TESTING
-		QW.addActionListener(new ActionListener() {
+		p[7][3].x = 3;
+		p[7][3].y = 7;
+		p[7][3].p = b;
+		pos_73.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		add(QW);	
-		QW.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Piece b = new Piece();
-				b.button = QW;
-				b.color = "White";
-				b.ident = "Queen";
+				PossibleMoves(7,3);
 				
-				Position s = new Position();
-				s.y = 7;
-				s.x = 3;
-				s.p = b;
-				p[7][3] = s;
-			
-				getPositions(s);
 			}
 		});
 		
-		
-		final JButton KW = new JButton("K");
-		add(KW);
-		/*b = new Piece();
-		b.button = KW;
-		b.color = "White";
-		b.ident = "King";*/
-		//p[7][4] = b;
-		
-		// FOR TESTING
-		KW.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		add(KW);	
-		KW.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Piece b = new Piece();
-				b.button = KW;
-				b.color = "White";
-				b.ident = "King";
-				
-				Position s = new Position();
-				s.y = 7;
-				s.x = 4;
-				s.p = b;
-				p[7][4] = s;
-			
-				getPositions(s);
-			}
-		});
-		
-		
-		
-		JButton BW_1 = new JButton("B");
-		add(BW_1);
+		JButton pos_74 = new JButton("");
+		pos_74.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_king.png")));
+		add(pos_74);
 		b = new Piece();
-		b.button = BW_1;
+		b.button = pos_74;
+		b.color = "White";
+		b.ident = "King";
+		p[7][4].x = 4;
+		p[7][4].y = 7;
+		p[7][4].p = b;
+		pos_74.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PossibleMoves(7,4);
+				
+			}
+		});
+		
+		JButton pos_75 = new JButton("");
+		pos_75.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_bishop.png")));
+		add(pos_75);
+		b = new Piece();
+		b.button = pos_75;
 		b.color = "White";
 		b.ident = "Bishop";
-		//p[7][5] = b;
+		p[7][5].x = 5;
+		p[7][5].y = 7;
+		p[7][5].p = b;
+		pos_75.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PossibleMoves(7,5);
+				
+			}
+		});
 		
-		JButton KnW_1 = new JButton("Kn");
-		add(KnW_1);
+		JButton pos_76 = new JButton("");
+		pos_76.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_knight.png")));
+		add(pos_76);
 		b = new Piece();
-		b.button = KnW_1;
+		b.button = pos_76;
 		b.color = "White";
 		b.ident = "Knight";
-		//p[7][6] = b;
+		p[7][6].x = 6;
+		p[7][6].y = 7;
+		p[7][6].p = b;
+		pos_76.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PossibleMoves(7,6);
+				
+			}
+		});
 		
-		JButton RW_1 = new JButton("R");
-		add(RW_1);
+		JButton pos_77 = new JButton("");
+		pos_77.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_rook.png")));
+		add(pos_77);
 		b = new Piece();
-		b.button = RW_1;
+		b.button = pos_77;
 		b.color = "White";
 		b.ident = "Rook";
-		//p[7][7] = b;
+		p[7][7].x = 7;
+		p[7][7].y = 7;
+		p[7][7].p = b;
+		pos_77.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				PossibleMoves(7,7);
+				
+			}
+		});
 		
 	
 	}
-/*
-    private static final int N = 8;
-    private static final int SIZE = 75;
-    
-    
-    
-    public ButtonBorder() {
-        super(new GridLayout(N, N));
-        this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
-        boolean different = false;
-        for(Integer j = 1; j <9; j++)
-        {
-	        for(Integer i = 1; i < 9; i++)
-	        {
-	        	JButton e11i = new JButton(Integer.toString(i*j));
-	        	if(different)
-	        	{
-	        		e11i.setBackground(Color.PINK);
-	        	}
-	        	else
-	        	{
-	        		e11i.setBackground(Color.WHITE);
-	        	}
-	        	add(e11i);
-	        	different = !different;
-	        }
-	        different = !different;
-        }
-    }
-*/
 
     private void display() {
         JFrame f = new JFrame("ButtonBorder");
@@ -488,16 +1198,8 @@ public class ButtonBorder extends JPanel {
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
 
+            @Override
             public void run() {
-            	/*ButtonBorder frame = new ButtonBorder();
-   
-				frame.setVisible(true);
-            	 JFrame f = new JFrame("ButtonBorder");
-                 f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                 //f.getContentPane().add(this);
-                 f.pack();
-                 f.setLocationRelativeTo(null);
-                 f.setVisible(true);*/
                 new ButtonBorder().display();
             }
         });
@@ -514,77 +1216,856 @@ public class ButtonBorder extends JPanel {
     */
 	public void getPositions(Position s)
 	{
-		Position spot;
-		s.p.available = new Vector<Position>();
+		
 		
 		//Added some basic first moves
 		switch(s.p.ident)
 		{
-			case("Pawn"):
-				if(s.y == 6)
+		case("Pawn"):
+			PawnPositions(s);
+	
+			break;
+		case("Rook"):
+			RookPositions(s);
+			break;
+		case("Knight"):
+			KnightPositions(s);
+			break;
+		case("Bishop"):
+			BishopPositions(s);
+			break;
+		case("Queen"):
+			QueenPositions(s);
+			break;
+		case("King"):
+			KingPositions(s);
+			break;
+		
+		
+		}
+		
+		int x[] = new int[s.p.available.size()];
+		int y[] = new int[s.p.available.size()];
+		
+		for(int i = 0; i < s.p.available.size(); i++)
+		{
+			x[i] = s.p.available.get(i).x;
+			y[i] = s.p.available.get(i).y;
+		}
+		
+		
+		
+		Disable();
+		for(int i = 0; i < s.p.available.size(); i++)
+		{
+			System.out.println(y[i] + " " + x[i]);
+			p[y[i]][x[i]].p.button.setEnabled(true);
+		}
+		p[s.y][s.x].p.button.setEnabled(true);
+		
+		
+	}
+	
+	public void Swap (Position o, Position n)
+	{
+		n.p.button.setIcon(o.p.button.getIcon());
+		n.p.ident = o.p.ident;
+		n.p.color = o.p.color;
+		
+		
+		o.p.button.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
+		o.p.ident = "Empty";
+		o.p.color = "Empty";
+		
+		for(int i = 0; i < 8; i++)
+		{
+			for(int j = 0; j < 8; j++)
+			{
+				p[j][i].p.button.setEnabled(true);
+			}
+		}
+		
+		one = null;
+		two = null;
+		
+		
+
+
+	}
+	public void Disable()
+	{
+		for(int i = 0; i < 8; i++)
+		{
+			for(int j = 0; j < 8; j++)
+			{
+				p[j][i].p.button.setEnabled(false);
+			}
+		}	
+	}
+	
+	public void PossibleMoves(int y, int x)
+	{
+		if(!p[y][x].p.ident.equals("Empty"))
+		{
+			Position s = new Position();
+			s = p[y][x];
+			
+			if(one == null)
+			{
+				one = s;
+				getPositions(s);
+			}
+			else
+			{
+				if(one != s && !(s.p.color.equals(one.p.color)))
 				{
-					spot = new Position();
-					spot.y = 4;
-					spot.x = s.x;
+					two = s;
+					Swap(one, two);
+				
+				}
+				if(one == s)
+				{
+					for(int i = 0; i < 8; i++)
+					{
+						for(int j = 0; j < 8; j++)
+						{
+							p[j][i].p.button.setEnabled(true);
+						}
+					}
+					one = null;
+					two = null;
+				}
+			}
+		}
+		else
+		{
+			Position s = new Position();
+			s = p[y][x];	
+			if(one != null)
+			{
+				two = s;
+				Swap(one,two);
+			}
+			
+		}
+		
+		
+	}
+	
+	public void PawnPositions(Position s){
+		Position spot;
+		s.p.available = new Vector<Position>();
+		
+		if(s.p.color.equals("Black") && s.y != 7)
+		{
+			if(s.y == 1)
+			{
+				spot = new Position();
+				spot.y = 3;
+				spot.x = s.x;
+				
+				if(!p[3][spot.x].p.color.equals(s.p.color))
+				{
 					s.p.available.add(spot);
-					System.out.println(s.p.available.size());
-					spot = new Position();
-					spot.y = 5;
-					spot.x = s.x;
+				}
+				spot = new Position();
+				spot.y = 2;
+				spot.x = s.x;
+				
+				if(!p[2][spot.x].p.color.equals(s.p.color))
+				{
 					s.p.available.add(spot);
-					System.out.println(s.p.available.size());
+				}
+				
+			}
+			else
+			{
+				if(s.y <= 7)
+				{
+					if(p[s.y+1][s.x].p.color.equals("Empty") )
+					{
+						spot = new Position();
+						spot.y = s.y + 1;
+						spot.x = s.x;
+						s.p.available.add(spot);
+					}
+				
+					if(s.x - 1 >= 0)
+					{
+						if(p[s.y+1][s.x-1].p.color.equals("White"))
+						{
+							spot = new Position();
+							spot.y = s.y + 1;
+							spot.x = s.x - 1;
+							s.p.available.add(spot);
+						}
+					}
+					if(s.x + 1 <= 7)
+					{
+						if(p[s.y+1][s.x+1].p.color.equals("White"))
+						{
+							spot = new Position();
+							spot.y = s.y + 1;
+							spot.x = s.x + 1;
+							s.p.available.add(spot);
+						}
+						
+					}
+				}
+			}
+		}
+		
+		if(s.p.color.equals("White") && s.y != 0)
+		{
+			if(s.y == 6)
+			{
+				spot = new Position();
+				spot.y = 4;
+				spot.x = s.x;
+				
+				if(!p[4][spot.x].p.color.equals(s.p.color))
+				{
+					s.p.available.add(spot);
+				}
+				spot = new Position();
+				spot.y = 5;
+				spot.x = s.x;
+				
+				if(!p[5][spot.x].p.color.equals(s.p.color))
+				{
+					s.p.available.add(spot);
+				}
+				
+			}
+			else
+			{
+				if(s.y >= 0)
+				{
+					if(p[s.y-1][s.x].p.color.equals("Empty") )
+					{
+						spot = new Position();
+						spot.y = s.y - 1;
+						spot.x = s.x;
+						s.p.available.add(spot);
+					}
+				
+					if(s.x - 1 >= 0)
+					{
+						if(p[s.y-1][s.x-1].p.color.equals("Black"))
+						{
+							spot = new Position();
+							spot.y = s.y - 1;
+							spot.x = s.x - 1;
+							s.p.available.add(spot);
+						}
+					}
+					if(s.x + 1 <= 7)
+					{
+						if(p[s.y-1][s.x+1].p.color.equals("Black"))
+						{
+							spot = new Position();
+							spot.y = s.y - 1;
+							spot.x = s.x + 1;
+							s.p.available.add(spot);
+						}
+						
+					}
+				}
+			}
+		}
+		
+	}
+	public void KingPositions(Position s){
+		Position spot;
+		s.p.available = new Vector<Position>();
+		
+		spot = new Position();	// North
+		spot.y = s.y - 1;
+		spot.x = s.x ;
+		if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 8) && (spot.x != 8)  && (spot.y != -1) && (spot.x != -1)){
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+	
+		spot = new Position();	// NorthEast
+		spot.y = s.y - 1;
+		spot.x = s.x + 1;
+		if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 8) && (spot.x != 8)  && (spot.y != -1) && (spot.x != -1) ){
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();	// East
+		spot.y = s.y;
+		spot.x = s.x + 1;
+		if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 8) && (spot.x != 8)  && (spot.y != -1) && (spot.x != -1)){
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();	// SouthEast
+		spot.y = s.y + 1;
+		spot.x = s.x + 1;
+		if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 8) && (spot.x != 8)  && (spot.y != -1) && (spot.x != -1)){
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();	// South 
+		spot.y = s.y + 1;
+		spot.x = s.x;
+		if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 8) && (spot.x != 8)  && (spot.y != -1) && (spot.x != -1)){
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();	// SouthWest 
+		spot.y = s.y + 1;
+		spot.x = s.x - 1;
+		if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 8) && (spot.x != 8)  && (spot.y != -1) && (spot.x != -1)){
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();	// West 
+		spot.y = s.y;
+		spot.x = s.x - 1;
+		if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 8) && (spot.x != 8)  && (spot.y != -1) && (spot.x != -1)){
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();	// NorthWest 
+		spot.y = s.y - 1;
+		spot.x = s.x - 1;
+		if((Math.abs(spot.y-s.y) <=1) && (Math.abs(spot.x-s.x) <=1) && (spot.y != 8) && (spot.x != 8)  && (spot.y != -1) && (spot.x != -1)){
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+	}
+	public void QueenPositions(Position s){
+		// pt to increment or decrement
+		Position spot;	
+		s.p.available = new Vector<Position>();
+		
+		
+		//Southeast diagonal
+		spot = new Position();
+		for(int i = s.x+1, j = s.y+1; i < 8 && j < 8; i++, j++){
+			spot = new Position();
+			spot.x = i;
+			spot.y = j;
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+				if((p[spot.y][spot.x].p.color.equals("Black")))
+				{
+					i = 9;
+					j = 9;
+				}
+			}
+			else
+			{
+				i = 9;
+				j = 9;
+			}
+			//System.out.println("bishop:southeast: "+"x="+spot.x+" y="+spot.y);
+		}
+		//Southwest diagonal
+		spot = new Position();
+		for(int i = s.x-1, j = s.y+1; i > -1 && j < 8; i--, j++){
+			spot = new Position();
+			spot.x = i;
+			spot.y = j;
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+				if((p[spot.y][spot.x].p.color.equals("Black")))
+				{
+					i = -2;
+					j = 9;
+				}
+			}
+			else
+			{
+				i = -2;
+				j = 9;
+			}
+			//System.out.println("bishop:southwest: "+"x="+spot.x+" y="+spot.y);
+		}
+		//Northeast diagonal
+		spot = new Position();
+		for(int i = s.x+1, j = s.y-1; i < 8 && j > -1; i++, j--){
+			spot = new Position();
+			spot.x = i;
+			spot.y = j;
+			
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				//System.out.println(i + " " + j + " " + p[spot.y][spot.x].p.color);
+				s.p.available.add(spot);
+				if((p[spot.y][spot.x].p.color.equals("Black")))
+				{
+					i = 9;
+					j = -2;
+				}
+			}
+			else
+			{
+				i = 9;
+				j = -2;
+			}
+			//System.out.println("bishop:northeast: "+"x="+spot.x+" y="+spot.y);
+		}
+		//Northwest diagonal
+		spot = new Position();
+		for(int i = s.x-1, j = s.y-1; i > -1 && j > -1; i--, j--){
+			spot = new Position();
+			spot.x = i;
+			spot.y = j;
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				//System.out.println(spot.x + " " + spot.y + " " + p[spot.y][spot.x].p.color);
+				s.p.available.add(spot);
+				if((p[spot.y][spot.x].p.color.equals("Black")))
+				{
+					i = -2;
+					j = -2;
+				}
+			}
+			else
+			{
+				i = -2;
+				j = -2;
+			}
+			//System.out.println("bishop:northwest: "+"x="+spot.x+" y="+spot.y);
+		}
+		
+		spot = new Position();
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All North
+		while(spot.y > 0){
+			Position spotValid = new Position();
+			spotValid.x = spot.x;
+			spotValid.y = --spot.y;
+			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spotValid);
+				if((p[spotValid.y][spotValid.x].p.color.equals("Black")))
+				{
+					spot.y = -1;
+				}
+			}
+			else
+			{
+				spot.y = -1;
+			}
+			//System.out.println("rook:north: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All South
+		while(spot.y < 7){
+			Position spotValid = new Position();
+			spotValid.x = spot.x;
+			spotValid.y = ++spot.y;
+			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spotValid);
+				if((p[spotValid.y][spotValid.x].p.color.equals("Black")))
+				{
+					spot.y = 8;
+				}
+			}
+			else
+			{
+				spot.y = 8;
+			}
+			//System.out.println("rook:south: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All East
+		while(spot.x < 7){
+			Position spotValid = new Position();
+			spotValid.x = ++spot.x;
+			spotValid.y = spot.y;
+			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spotValid);
+				if((p[spotValid.y][spotValid.x].p.color.equals("Black")))
+				{
+					spot.x = 8;
+				}
+			}
+			else
+			{
+				spot.x = 8;
+			}
+			//System.out.println("rook:east: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		spot = new Position();
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All West
+		while (spot.x > 0){
+			Position spotValid = new Position();
+			spotValid.x = --spot.x;
+			spotValid.y = spot.y;
+			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spotValid);
+				if((p[spotValid.y][spotValid.x].p.color.equals("Black")))
+				{
+					spot.x = -1;
+				}
+			}
+			else
+			{
+				spot.x = -1;
+			}
+			//System.out.println("rook:west: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		
+	}
+	public void RookPositions(Position s)
+	{
+		Position spot = new Position();
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		s.p.available = new Vector<Position>();
+		
+		//All North
+		while(spot.y > 0){
+			Position spotValid = new Position();
+			spotValid.x = spot.x;
+			spotValid.y = --spot.y;
+			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
+			{
+				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
+				{
+					s.p.available.add(spotValid);
 				}
 				else
 				{
-					spot = new Position();
-					spot.y = s.y - 1;
-					spot.x = s.x;
-					s.p.available.add(spot);
+					spot.y = -1;
 				}
-		
-				break;
-				
-			case("Rook"):
-				Rook.getPositions(s);
-				break;
-				
-			case("Knight"):
-				spot = new Position();
-				spot.y = s.y - 2;
-				spot.x = s.x - 1;
-				if(s.x >= 0 && s.y >= 0)
-				{
-					s.p.available.add(spot);
-				}
-				spot = new Position();
-				spot.y = s.y - 2;
-				spot.x = s.x + 1;
-				if(s.x >= 0 && s.y >= 0)
-				{
-					s.p.available.add(spot);
-				}
-				
-				break;
-				
-			case("Bishop"):
-				Bishop.getPositions(s);
-				break;
-			
-			case("Queen"):
-				Queen.getPositions(s);
-				break;
-				
-			case("King"):
-				King.getPositions(s);
-				break;
-		}
-		System.out.println("");
-		for(int i = 0; i < s.p.available.size(); i++)
-		{
-			if(s.p.available.size() != 0)
+			}
+			else
 			{
-				System.out.println(s.p.available.get(i).x + " " + s.p.available.get(i).y);
+				spot.y = -1;
+			}
+			//System.out.println("rook:north: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All South
+		while(spot.y < 7){
+			Position spotValid = new Position();
+			spotValid.x = spot.x;
+			spotValid.y = ++spot.y;
+			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
+			{
+				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
+				{
+					s.p.available.add(spotValid);
+				}
+				else
+				{
+					spot.y = 8;
+				}
+			}
+			else
+			{
+				spot.y = 8;
+			}
+			//System.out.println("rook:south: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All East
+		while(spot.x < 7){
+			Position spotValid = new Position();
+			spotValid.x = ++spot.x;
+			spotValid.y = spot.y;
+			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
+			{
+				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
+				{
+					s.p.available.add(spotValid);
+				}
+				else
+				{
+					spot.x = 8;
+				}
+			}
+			else
+			{
+				spot.x = 8;
+			}
+			//System.out.println("rook:east: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		spot.x = s.x;
+		spot.y = s.y;
+		
+		//All West
+		while (spot.x > 0){
+			Position spotValid = new Position();
+			spotValid.x = --spot.x;
+			spotValid.y = spot.y;
+			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
+			{
+				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
+				{
+					s.p.available.add(spotValid);
+				}
+				else
+				{
+					spot.x = -1;
+				}
+			}
+			else
+			{
+				spot.x = -1;
+			}
+			//System.out.println("rook:west: "+"x="+spotValid.x+" y="+spotValid.y);
+		}
+		
+		
+		
+	}
+	public void BishopPositions(Position s)
+	{
+		Position spot;
+		s.p.available = new Vector<Position>();
+		
+		
+		//Southeast diagonal
+			spot = new Position();
+			for(int i = s.x+1, j = s.y+1; i < 8 && j < 8; i++, j++){
+				spot = new Position();
+				spot.x = i;
+				spot.y = j;
+				if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+				{
+					s.p.available.add(spot);
+					if((p[spot.y][spot.x].p.color.equals("Black")))
+					{
+						i = 9;
+						j = 9;
+					}
+				}
+				else
+				{
+					i = 9;
+					j = 9;
+				}
+				//System.out.println("bishop:southeast: "+"x="+spot.x+" y="+spot.y);
+			}
+			//Southwest diagonal
+			spot = new Position();
+			for(int i = s.x-1, j = s.y+1; i > -1 && j < 8; i--, j++){
+				spot = new Position();
+				spot.x = i;
+				spot.y = j;
+				if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+				{
+					s.p.available.add(spot);
+					if((p[spot.y][spot.x].p.color.equals("Black")))
+					{
+						i = -2;
+						j = 9;
+					}
+				}
+				else
+				{
+					i = -2;
+					j = 9;
+				}
+				//System.out.println("bishop:southwest: "+"x="+spot.x+" y="+spot.y);
+			}
+			//Northeast diagonal
+			spot = new Position();
+			for(int i = s.x+1, j = s.y-1; i < 8 && j > -1; i++, j--){
+				spot = new Position();
+				spot.x = i;
+				spot.y = j;
+				
+				if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+				{
+					//System.out.println(i + " " + j + " " + p[spot.y][spot.x].p.color);
+					s.p.available.add(spot);
+					if((p[spot.y][spot.x].p.color.equals("Black")))
+					{
+						i = 9;
+						j = -2;
+					}
+				}
+				else
+				{
+					i = 9;
+					j = -2;
+				}
+				//System.out.println("bishop:northeast: "+"x="+spot.x+" y="+spot.y);
+			}
+			//Northwest diagonal
+			spot = new Position();
+			for(int i = s.x-1, j = s.y-1; i > -1 && j > -1; i--, j--){
+				spot = new Position();
+				spot.x = i;
+				spot.y = j;
+				if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+				{
+					//System.out.println(spot.x + " " + spot.y + " " + p[spot.y][spot.x].p.color);
+					s.p.available.add(spot);
+					if((p[spot.y][spot.x].p.color.equals("Black")))
+					{
+						i = -2;
+						j = -2;
+					}
+				}
+				else
+				{
+					i = -2;
+					j = -2;
+				}
+				//System.out.println("bishop:northwest: "+"x="+spot.x+" y="+spot.y);
+			}
+
+		
+	}
+	public void KnightPositions(Position s){
+		Position spot;
+		s.p.available = new Vector<Position>();
+		
+		spot = new Position();
+		spot.y = s.y - 2;
+		spot.x = s.x - 1;
+		if(spot.x >= 0 && spot.y >= 0 )
+		{
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
 			}
 		}
+		spot = new Position();
+		spot.y = s.y - 2;
+		spot.x = s.x + 1;
+		
+		if(spot.x <= 7 && spot.y >= 0)
+		{
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();
+		spot.y = s.y + 2;
+		spot.x = s.x + 1;
+		
+		if(spot.x <= 7 && spot.y <= 7)
+		{
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();
+		spot.y = s.y + 2;
+		spot.x = s.x - 1;
+		
+		if(spot.x >= 0 && spot.y <= 7)
+		{
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		
+		
+		
+		spot = new Position();
+		spot.y = s.y - 1;
+		spot.x = s.x - 2;
+		if(spot.x >= 0 && spot.y >= 0 )
+		{
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();
+		spot.y = s.y + 1;
+		spot.x = s.x - 2;
+		
+		if(spot.x >= 0 && spot.y <= 7)
+		{
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();
+		spot.y = s.y - 1;
+		spot.x = s.x + 2;
+		
+		if(spot.x <= 7 && spot.y >= 0)
+		{
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		spot = new Position();
+		spot.y = s.y + 1;
+		spot.x = s.x + 2;
+		
+		if(spot.x <= 7 && spot.y <= 7)
+		{
+			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
+			{
+				s.p.available.add(spot);
+			}
+		}
+		
+		
 	}
 }
