@@ -211,7 +211,7 @@ public class ButtonBorder extends JPanel {
 		JButton e32 = new JButton("");
 		add(e32);
 		
-		JButton PW_1 = new JButton("P");
+		final JButton PW_1 = new JButton("P");
 		add(PW_1);
 	
 		PW_1.addActionListener(new ActionListener() {
@@ -287,13 +287,29 @@ public class ButtonBorder extends JPanel {
 		b.ident = "Pawn";
 		//p[6][7] = b;
 		
-		JButton RW = new JButton("R");
+		final JButton RW = new JButton("R");
 		add(RW);
-		b = new Piece();
-		b.button = RW;
-		b.color = "White";
-		b.ident = "Rook";
-		//p[7][0] = b;
+		RW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		add(RW);	
+		RW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Piece b = new Piece();
+				b.button = RW;
+				b.color = "White";
+				b.ident = "Rook";
+				
+				Position s = new Position();
+				s.y = 7;
+				s.x = 0;
+				s.p = b;
+				p[7][0] = s;
+			
+				getPositions(s);
+			}
+		});
 		
 		final JButton KnW = new JButton("Kn");
 		KnW.addActionListener(new ActionListener() {
@@ -321,11 +337,22 @@ public class ButtonBorder extends JPanel {
 		
 		JButton BW = new JButton("B");
 		add(BW);
-		b = new Piece();
-		b.button = BW;
-		b.color = "White";
-		b.ident = "Bishop";
-		//p[7][2] = b;
+		BW.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Piece b = new Piece();
+				b.button = RW;
+				b.color = "White";
+				b.ident = "Bishop";
+				
+				Position s = new Position();
+				s.y = 7;
+				s.x = 2;
+				s.p = b;
+				p[7][2] = s;
+			
+				getPositions(s);
+			}
+		});
 		
 		final JButton QW = new JButton("Q");
 		add(QW);
@@ -461,7 +488,6 @@ public class ButtonBorder extends JPanel {
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
 
-            @Override
             public void run() {
             	/*ButtonBorder frame = new ButtonBorder();
    
@@ -494,60 +520,63 @@ public class ButtonBorder extends JPanel {
 		//Added some basic first moves
 		switch(s.p.ident)
 		{
-		case("Pawn"):
-			if(s.y == 6)
-			{
-				spot = new Position();
-				spot.y = 4;
-				spot.x = s.x;
-				s.p.available.add(spot);
-				System.out.println(s.p.available.size());
-				spot = new Position();
-				spot.y = 5;
-				spot.x = s.x;
-				s.p.available.add(spot);
-				System.out.println(s.p.available.size());
-			}
-			else
-			{
-				spot = new Position();
-				spot.y = s.y - 1;
-				spot.x = s.x;
-				s.p.available.add(spot);
-			}
-	
-			break;
-		case("Rook"):
-			
-			break;
-		case("Knight"):
-			spot = new Position();
-			spot.y = s.y - 2;
-			spot.x = s.x - 1;
-			if(s.x >= 0 && s.y >= 0)
-			{
-				s.p.available.add(spot);
-			}
-			spot = new Position();
-			spot.y = s.y - 2;
-			spot.x = s.x + 1;
-			if(s.x >= 0 && s.y >= 0)
-			{
-				s.p.available.add(spot);
-			}
-			
-			break;
-		case("Bishop"):
-			
-			break;
-		case("Queen"):
-			Queen.getPositions(s);
-			break;
-		case("King"):
-			King.getPositions(s);
-			break;
+			case("Pawn"):
+				if(s.y == 6)
+				{
+					spot = new Position();
+					spot.y = 4;
+					spot.x = s.x;
+					s.p.available.add(spot);
+					System.out.println(s.p.available.size());
+					spot = new Position();
+					spot.y = 5;
+					spot.x = s.x;
+					s.p.available.add(spot);
+					System.out.println(s.p.available.size());
+				}
+				else
+				{
+					spot = new Position();
+					spot.y = s.y - 1;
+					spot.x = s.x;
+					s.p.available.add(spot);
+				}
 		
-		
+				break;
+				
+			case("Rook"):
+				Rook.getPositions(s);
+				break;
+				
+			case("Knight"):
+				spot = new Position();
+				spot.y = s.y - 2;
+				spot.x = s.x - 1;
+				if(s.x >= 0 && s.y >= 0)
+				{
+					s.p.available.add(spot);
+				}
+				spot = new Position();
+				spot.y = s.y - 2;
+				spot.x = s.x + 1;
+				if(s.x >= 0 && s.y >= 0)
+				{
+					s.p.available.add(spot);
+				}
+				
+				break;
+				
+			case("Bishop"):
+				Bishop.getPositions(s);
+				break;
+			
+			case("Queen"):
+				Queen.getPositions(s);
+				break;
+				
+			case("King"):
+				King.getPositions(s);
+				break;
 		}
 		for(int i = 0; i < s.p.available.size(); i++)
 		{
