@@ -11,6 +11,7 @@ import java.util.Vector;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
@@ -58,6 +59,18 @@ public class ButtonBorder extends JPanel {
 		pos_00.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {	
 				PossibleMoves(0,0);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -76,6 +89,18 @@ public class ButtonBorder extends JPanel {
 		pos_01.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(0,1);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -94,6 +119,18 @@ public class ButtonBorder extends JPanel {
 		pos_02.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(0,2);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 
@@ -112,6 +149,18 @@ public class ButtonBorder extends JPanel {
 		pos_03.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(0,3);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -130,6 +179,18 @@ public class ButtonBorder extends JPanel {
 		pos_04.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(0,4);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -148,6 +209,18 @@ public class ButtonBorder extends JPanel {
 		pos_05.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(0,5);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 	
@@ -166,6 +239,18 @@ public class ButtonBorder extends JPanel {
 		pos_06.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(0,6);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -184,6 +269,18 @@ public class ButtonBorder extends JPanel {
 		pos_07.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(0,7);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -203,6 +300,18 @@ public class ButtonBorder extends JPanel {
 		pos_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(1,0);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -221,6 +330,18 @@ public class ButtonBorder extends JPanel {
 		pos_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(1,1);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 	
@@ -239,6 +360,18 @@ public class ButtonBorder extends JPanel {
 		pos_12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(1,2);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -258,6 +391,18 @@ public class ButtonBorder extends JPanel {
 		pos_13.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(1,3);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -276,6 +421,18 @@ public class ButtonBorder extends JPanel {
 		pos_14.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(1,4);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 	
@@ -294,6 +451,18 @@ public class ButtonBorder extends JPanel {
 		pos_15.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(1,5);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 	
@@ -312,6 +481,18 @@ public class ButtonBorder extends JPanel {
 		pos_16.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(1,6);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -330,6 +511,18 @@ public class ButtonBorder extends JPanel {
 		pos_17.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(1,7);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 	
@@ -350,6 +543,18 @@ public class ButtonBorder extends JPanel {
 		pos_20.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(2,0);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -369,6 +574,18 @@ public class ButtonBorder extends JPanel {
 		pos_21.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(2,1);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -387,6 +604,18 @@ public class ButtonBorder extends JPanel {
 		pos_22.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(2,2);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -405,6 +634,18 @@ public class ButtonBorder extends JPanel {
 		pos_23.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(2,3);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -423,6 +664,18 @@ public class ButtonBorder extends JPanel {
 		pos_24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(2,4);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -441,6 +694,18 @@ public class ButtonBorder extends JPanel {
 		pos_25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(2,5);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -459,6 +724,18 @@ public class ButtonBorder extends JPanel {
 		pos_26.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(2,6);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -478,6 +755,18 @@ public class ButtonBorder extends JPanel {
 		pos_27.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(2,7);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -497,6 +786,18 @@ public class ButtonBorder extends JPanel {
 		pos_30.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(3,0);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -515,6 +816,18 @@ public class ButtonBorder extends JPanel {
 		pos_31.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(3,1);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -533,6 +846,18 @@ public class ButtonBorder extends JPanel {
 		pos_32.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(3,2);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -551,6 +876,18 @@ public class ButtonBorder extends JPanel {
 		pos_33.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(3,3);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -569,6 +906,18 @@ public class ButtonBorder extends JPanel {
 		pos_34.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(3,4);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -587,6 +936,18 @@ public class ButtonBorder extends JPanel {
 		pos_35.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(3,5);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -605,6 +966,18 @@ public class ButtonBorder extends JPanel {
 		pos_36.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(3,6);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -623,6 +996,18 @@ public class ButtonBorder extends JPanel {
 		pos_37.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(3,7);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -641,6 +1026,18 @@ public class ButtonBorder extends JPanel {
 		pos_40.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(4,0);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -662,6 +1059,18 @@ public class ButtonBorder extends JPanel {
 		pos_41.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(4,1);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -680,6 +1089,18 @@ public class ButtonBorder extends JPanel {
 		pos_42.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(4,2);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -698,6 +1119,18 @@ public class ButtonBorder extends JPanel {
 		pos_43.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(4,3);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -716,6 +1149,18 @@ public class ButtonBorder extends JPanel {
 		pos_44.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(4,4);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -734,6 +1179,18 @@ public class ButtonBorder extends JPanel {
 		pos_45.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(4,5);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -753,6 +1210,18 @@ public class ButtonBorder extends JPanel {
 		pos_46.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(4,6);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -770,7 +1239,20 @@ public class ButtonBorder extends JPanel {
 		pos_47.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(4,7);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
 				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
+			}
+				
 			});
 		
 		JButton pos_50 = new JButton("");
@@ -789,6 +1271,18 @@ public class ButtonBorder extends JPanel {
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				PossibleMoves(5,0);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -809,6 +1303,18 @@ public class ButtonBorder extends JPanel {
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				PossibleMoves(5,1);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -827,6 +1333,18 @@ public class ButtonBorder extends JPanel {
 		pos_52.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(5,2);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -844,6 +1362,18 @@ public class ButtonBorder extends JPanel {
 		pos_53.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(5,3);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -860,6 +1390,18 @@ public class ButtonBorder extends JPanel {
 		pos_54.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(5,4);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -876,6 +1418,18 @@ public class ButtonBorder extends JPanel {
 		pos_55.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(5,5);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -892,6 +1446,18 @@ public class ButtonBorder extends JPanel {
 		pos_56.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(5,6);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -908,6 +1474,18 @@ public class ButtonBorder extends JPanel {
 		pos_57.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(5,7);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -925,6 +1503,18 @@ public class ButtonBorder extends JPanel {
 		pos_60.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {		
 			PossibleMoves(6,0);	
+			Position kingW = getKing(p, "White");
+			Position kingB = getKing(p, "Black");
+			boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+			boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+			System.out.println("White checkmated "+chkMateW);
+			System.out.println("Black checkmated "+chkMateB);
+			if(chkMateW == true){
+				displayWin("Black");
+			}
+			if(chkMateB == true){
+				displayWin("White");
+			}
 			}
 		});
 		
@@ -942,6 +1532,18 @@ public class ButtonBorder extends JPanel {
 		pos_61.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PossibleMoves(6,1);	
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -959,6 +1561,18 @@ public class ButtonBorder extends JPanel {
 		pos_62.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(6,2);	
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -977,6 +1591,18 @@ public class ButtonBorder extends JPanel {
 		pos_63.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(6,3);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -993,6 +1619,18 @@ public class ButtonBorder extends JPanel {
 		pos_64.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(6,4);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -1009,6 +1647,18 @@ public class ButtonBorder extends JPanel {
 		pos_65.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(6,5);	
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 				}
 			});
 		
@@ -1025,6 +1675,18 @@ public class ButtonBorder extends JPanel {
 		pos_66.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {		
 				PossibleMoves(6,6);
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}});
 		
 		JButton pos_67 = new JButton("");
@@ -1040,7 +1702,18 @@ public class ButtonBorder extends JPanel {
 		pos_67.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(6,7);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1058,7 +1731,18 @@ public class ButtonBorder extends JPanel {
 		pos_70.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(7,0);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1078,7 +1762,18 @@ public class ButtonBorder extends JPanel {
 		pos_71.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(7,1);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1096,7 +1791,18 @@ public class ButtonBorder extends JPanel {
 		pos_72.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(7,2);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1113,7 +1819,18 @@ public class ButtonBorder extends JPanel {
 		pos_73.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(7,3);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1130,7 +1847,18 @@ public class ButtonBorder extends JPanel {
 		pos_74.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(7,4);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1147,7 +1875,18 @@ public class ButtonBorder extends JPanel {
 		pos_75.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(7,5);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1164,7 +1903,18 @@ public class ButtonBorder extends JPanel {
 		pos_76.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(7,6);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1181,7 +1931,18 @@ public class ButtonBorder extends JPanel {
 		pos_77.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PossibleMoves(7,7);
-				
+				Position kingW = getKing(p, "White");
+				Position kingB = getKing(p, "Black");
+				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
+				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
+				System.out.println("White checkmated "+chkMateW);
+				System.out.println("Black checkmated "+chkMateB);
+				if(chkMateW == true){
+					displayWin("Black");
+				}
+				if(chkMateB == true){
+					displayWin("White");
+				}
 			}
 		});
 		
@@ -1225,7 +1986,6 @@ public class ButtonBorder extends JPanel {
 		{
 		case("Pawn"):
 			PawnPositions(s);
-	
 			break;
 		case("Rook"):
 			RookPositions(s);
@@ -1248,7 +2008,7 @@ public class ButtonBorder extends JPanel {
 		
 		int x[] = new int[s.p.available.size()];
 		int y[] = new int[s.p.available.size()];
-		
+		System.out.println("available "+s.p.available);
 		for(int i = 0; i < s.p.available.size(); i++)
 		{
 			x[i] = s.p.available.get(i).x;
@@ -1332,7 +2092,6 @@ public class ButtonBorder extends JPanel {
 					{
 						turn = 'W';
 					}
-				
 				}
 				if(one == s)
 				{
@@ -1364,12 +2123,14 @@ public class ButtonBorder extends JPanel {
 				{
 					turn = 'W';
 				}
+				System.out.println("swap2");
 			}
 			
 		}
-		
-		
+	
 	}
+	
+	// --------------------------- Piece Type Positions ------------------------
 	
 	public void PawnPositions(Position s){
 		Position spot;
@@ -2087,4 +2848,194 @@ public class ButtonBorder extends JPanel {
 		
 		
 	}
+	
+	
+	public void getPossibleMoves(Position s){
+		//Added some basic first moves
+		switch(s.p.ident)
+		{
+		case("Pawn"):
+			PawnPositions(s);
+			break;
+		case("Rook"):
+			RookPositions(s);
+			break;
+		case("Knight"):
+			KnightPositions(s);
+			break;
+		case("Bishop"):
+			BishopPositions(s);
+			break;
+		case("Queen"):
+			QueenPositions(s);
+			break;
+		case("King"):
+			KingPositions(s);
+			break;
+		
+		}
+	}
+		
+	
+	
+	public static Position getKing(Position[][] board, String usrColor){
+		for (int i = 0; i < 8; i++) {
+		    for (int j = 0; j < 8; j++) {   // == instead of equals
+		    	if (board[i][j].p.color.equals(usrColor)){
+		    		// get possible moves
+		    		if(board[i][j].p.ident.endsWith("King")){
+		    			return board[i][j];
+		    		}
+		    	}
+		    }
+		}
+		return null;
+		
+	}
+	
+	// Check if user's king is in Checkmate
+	public boolean isCheckMate(Position k, Position[][] board, String usrColor, String oppColor ){
+		boolean check = false;	// king is in danger
+		boolean checkMate = true;	// king can't get out of check
+		Vector<Position> checkingP = new Vector<Position>(); // piece that can put king in check
+		
+		// if king is captured, opponent wins
+		if(k == null){
+			return checkMate;
+		}
+		
+		// Is king in check?
+		// for pieces with opponent's color:
+		for (int i = 0; i < 8; i++) {
+		    for (int j = 0; j < 8; j++) {
+		    	if (board[i][j].p.color.equals(oppColor)){
+		    		// get possible moves
+		    		Position s = new Position();
+					s = board[i][j];
+					getPossibleMoves(s);
+					if(s.p.available.size() != 0)
+	    			{
+						for(int m = 0; m < s.p.available.size(); m++)
+						{
+							//System.out.println(s.p.color+" "+s.p.ident+" avail "+ s.p.available.get(m).x+" "+s.p.available.get(m).y);
+				    		//System.out.println("k "+ k.x+" "+k.y);
+		    				// if square in opponent's possible moves has user's king
+		    				if( (s.p.available.get(m).x == k.x) && (s.p.available.get(m).y == k.y)){
+		    					// king is in check
+		    					check = true;
+		    					checkingP.add(s);
+		    				}
+		    			}
+		    		}
+		    	}
+		    }
+		}
+		//System.out.println("check "+check);
+		if(check == false){
+			return false;
+		}
+		else{
+		// Can king get out of check?
+		// for pieces with user's color:
+			for (int i = 0; i < 8; i++) {
+			    for (int j = 0; j < 8; j++) {
+			    	if (board[i][j].p.color.equals(usrColor)){
+			    		// get possible moves
+			    		Position s = new Position();
+						s = board[i][j];
+						//System.out.println("user piece "+ s.x+" "+s.y);
+						getPossibleMoves(s);
+			    		if(s.p.available.size() != 0){
+			    			for(int m = 0; m < s.p.available.size(); m++){
+			    				// see if square in user's possible moves has opponent checking piece 
+			    				//(checking piece can be captured)
+			    				for(int n = 0; n < checkingP.size(); n++){
+			    					if(s.p.ident.equals("Pawn")){	// Pawns can only capture diagonally
+			    						if((s.p.available.get(m).x == s.x+1 || s.p.available.get(m).x == s.x-1) && (s.p.available.get(m).y == s.y+1 || s.p.available.get(m).y == s.y-1)){
+			    							if( (s.p.available.get(m).x == checkingP.get(n).x) && (s.p.available.get(m).y == checkingP.get(n).y)){
+			    								//System.out.println("chkmate1 Pawn s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
+					    						//System.out.println("chkmate1 Pawn checkinP "+checkingP.get(n).x+" "+ checkingP.get(n).y);
+			    								checkMate = false;
+					    					}
+			    						}
+			    					}
+			    					else{
+			    						if( (s.p.available.get(m).x == checkingP.get(n).x) && (s.p.available.get(m).y == checkingP.get(n).y)){
+			    							//System.out.println("chkmate1 s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
+			    							//System.out.println("chkmate1 checkinP "+checkingP.get(n).x+" "+ checkingP.get(n).y);
+			    							checkMate = false;
+			    						}
+			    					}
+			    				// if square in user's possible moves is a square in the checking piece's possible move to the king 
+			    					// (path to king can be blocked)
+			    					if( (s.p.available.get(m).x == checkingP.get(n).p.available.get(m).x) && (s.p.available.get(m).y == checkingP.get(n).p.available.get(m).y)){
+			    						//System.out.println("chkmate2 s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
+			    						//System.out.println("chkmate2 checkinP "+checkingP.get(n).p.available.get(m).x+" "+ checkingP.get(n).p.available.get(m).y);
+			    						checkMate = false;
+			    					}
+			    				}
+			    			}
+			    		}
+			    	}
+			    }
+			}
+		// if possible moves of user's king is "Empty" square
+		// and move is not in checking piece's path (king can move out of the way)
+			
+			// used to see if all king's move's are in checking path
+			Vector<Integer> movesInChekPath = new Vector<Integer>(); 
+			Position s = new Position();
+			s = k;
+			getPossibleMoves(s);
+			// get king's possible moves
+			if(s.p.available.size() != 0){
+				for(int m = 0; m < s.p.available.size(); m++){
+					for(int n = 0; n < checkingP.size(); n++){
+						Position checkP = new Position();
+						checkP = checkingP.get(n);
+						getPossibleMoves(checkP);
+						// see if a king possible move is in the path of a checking piece's possible move
+						for(int i = 0; i < checkP.p.available.size(); i++){
+							if( (s.p.available.get(m).x == checkP.p.available.get(i).x) && (s.p.available.get(m).y == checkP.p.available.get(i).y) && board[s.p.available.get(m).x][s.p.available.get(m).y].p.color.equals("Empty")){
+								//System.out.println("chkmate3 s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
+	    						//System.out.println("chkmate3 checkinP "+checkP.p.available.get(i).x+" "+ checkP.p.available.get(i).y);
+	    						//System.out.println("chkmate3 color "+board[s.p.available.get(m).x][s.p.available.get(m).y].p.color);
+								movesInChekPath.add(1);
+							}
+						}
+					}
+				}
+			}
+			if(movesInChekPath.size() == s.p.available.size()){
+				// if all king's move's are in a checking piece path
+				checkMate = true;
+			}
+		}
+		
+		return checkMate;
+	}
+	
+	public void displayWin(String winner){
+		Object[] options = {"Rematch?", "Return to Lobby"};
+		JFrame frame = new JFrame("Winner");
+		int n = JOptionPane.showOptionDialog(frame,
+				winner + " wins!",
+				"End of Match",
+				JOptionPane.YES_NO_OPTION,
+				JOptionPane.INFORMATION_MESSAGE,
+				null,     //do not use a custom Icon
+				options,  //the titles of buttons
+				options[0]); //default button title
+		if (n == JOptionPane.YES_OPTION) {
+           // Rematch
+        } else if (n == JOptionPane.NO_OPTION) {
+        	// Return to Lobby
+        } else if (n == JOptionPane.CANCEL_OPTION) {
+        	
+        } else {
+           
+        }
+	}
+	
+	
 }
