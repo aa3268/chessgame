@@ -93,6 +93,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(0,1);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -123,6 +124,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(0,2);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -153,6 +155,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(0,3);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -183,6 +186,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(0,4);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -213,6 +217,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(0,5);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -243,6 +248,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(0,6);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -273,6 +279,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(0,7);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -304,6 +311,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(1,0);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -334,6 +342,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(1,1);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -364,6 +373,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(1,2);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -395,6 +405,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(1,3);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -425,6 +436,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(1,4);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -455,6 +467,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(1,5);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -485,6 +498,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(1,6);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -515,6 +529,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(1,7);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1512,6 +1527,7 @@ public class ButtonBorder extends JPanel {
 			PossibleMoves(6,0);	
 			Position kingW = getKing(p, "White");
 			Position kingB = getKing(p, "Black");
+			Position promoteW = checkPromotionWhite(p);
 			boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 			boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 			System.out.println("White checkmated "+chkMateW);
@@ -1541,6 +1557,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(6,1);	
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1570,6 +1587,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(6,2);	
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1600,6 +1618,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(6,3);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1628,6 +1647,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(6,4);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1656,6 +1676,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(6,5);	
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1684,6 +1705,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(6,6);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1711,6 +1733,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(6,7);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1740,6 +1763,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(7,0);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1771,6 +1795,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(7,1);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1805,6 +1830,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(7,2);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1833,6 +1859,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(7,3);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1861,6 +1888,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(7,4);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1889,6 +1917,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(7,5);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1917,6 +1946,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(7,6);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -1945,6 +1975,7 @@ public class ButtonBorder extends JPanel {
 				PossibleMoves(7,7);
 				Position kingW = getKing(p, "White");
 				Position kingB = getKing(p, "Black");
+				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
 				System.out.println("White checkmated "+chkMateW);
@@ -2609,6 +2640,7 @@ public class ButtonBorder extends JPanel {
 		spot.y = s.y;
 		
 		s.p.available = new Vector<Position>();
+		
 		//All North
 		while(spot.y > 0){
 			Position spotValid = new Position();
@@ -2619,13 +2651,8 @@ public class ButtonBorder extends JPanel {
 				s.p.available.add(spotValid);
 				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
 				{
-					//s.p.available.add(spotValid);
 					spot.y = -1;
 				}
-				/*else
-				{
-					spot.y = -1;
-				}*/
 			}
 			else
 			{
@@ -2647,13 +2674,8 @@ public class ButtonBorder extends JPanel {
 				s.p.available.add(spotValid);
 				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
 				{
-					//s.p.available.add(spotValid);
 					spot.y = 8;
 				}
-				/*else
-				{
-					spot.y = 8;
-				}*/
 			}
 			else
 			{
@@ -2675,13 +2697,8 @@ public class ButtonBorder extends JPanel {
 				s.p.available.add(spotValid);
 				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
 				{
-					//s.p.available.add(spotValid);
 					spot.x = 8;
 				}
-				/*else
-				{
-					spot.x = 8;
-				}*/
 			}
 			else
 			{
@@ -2703,13 +2720,8 @@ public class ButtonBorder extends JPanel {
 				s.p.available.add(spotValid);
 				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
 				{
-					//s.p.available.add(spotValid);
 					spot.x = -1;
 				}
-				/*else
-				{
-					spot.x = -1;
-				}*/
 			}
 			else
 			{
@@ -2725,7 +2737,6 @@ public class ButtonBorder extends JPanel {
 	{
 		Position spot;
 		s.p.available = new Vector<Position>();
-		
 		
 		//Southeast diagonal
 			spot = new Position();
@@ -2749,6 +2760,7 @@ public class ButtonBorder extends JPanel {
 				}
 				//System.out.println("bishop:southeast: "+"x="+spot.x+" y="+spot.y);
 			}
+			
 			//Southwest diagonal
 			spot = new Position();
 			for(int i = s.x-1, j = s.y+1; i > -1 && j < 8; i--, j++){
@@ -2771,6 +2783,7 @@ public class ButtonBorder extends JPanel {
 				}
 				//System.out.println("bishop:southwest: "+"x="+spot.x+" y="+spot.y);
 			}
+			
 			//Northeast diagonal
 			spot = new Position();
 			for(int i = s.x+1, j = s.y-1; i < 8 && j > -1; i++, j--){
@@ -2795,6 +2808,7 @@ public class ButtonBorder extends JPanel {
 				}
 				//System.out.println("bishop:northeast: "+"x="+spot.x+" y="+spot.y);
 			}
+			
 			//Northwest diagonal
 			spot = new Position();
 			for(int i = s.x-1, j = s.y-1; i > -1 && j > -1; i--, j--){
@@ -2950,6 +2964,31 @@ public class ButtonBorder extends JPanel {
 		}
 	}
 		
+	public static Position checkPromotionBlack(Position[][] board){
+		for(int j = 0; j < 8; j++){
+			if(board[7][j].p.ident.endsWith("Pawn") && board[7][j].p.color.equals("Black")){
+				System.out.println("Promote Black Pawn: 7," + j);
+				return choosePromote(board[7][j]);
+			}
+		}
+		return null;
+	}
+	
+	public static Position choosePromote(Position board){
+		Object[] options = {"Queen", "Rook", "Bishop", "Knight"};
+		JFrame frame = new JFrame("Promote your Pawn");
+		return null;
+	}
+	
+	public static Position checkPromotionWhite(Position[][] board){
+		for(int j = 0; j < 8; j++){
+			if(board[0][j].p.ident.endsWith("Pawn") && board[0][j].p.color.equals("White")){
+				System.out.println("Promote White Pawn: 0," + j);
+				return board[0][j];
+			}
+		}
+		return null;
+	}
 	
 	public static Position getKing(Position[][] board, String usrColor){
 		for (int i = 0; i < 8; i++) {
