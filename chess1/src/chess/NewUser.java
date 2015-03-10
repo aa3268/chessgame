@@ -20,8 +20,10 @@ public class NewUser extends JFrame {
 
 	private JPanel contentPane;
 	private JPasswordField passwordField;
+	private JPasswordField passwordVField;
 	private JTextField textField;
 	static NewUser frame;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -42,13 +44,11 @@ public class NewUser extends JFrame {
 	 * Create the frame.
 	 */
 	public NewUser() {
-		
-		setBounds(100, 100, 300, 149);
+		setBounds(200, 200, 400, 225);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
 		
 		JButton Cancel = new JButton("Cancel");
 		Cancel.addActionListener(new ActionListener() {
@@ -56,7 +56,7 @@ public class NewUser extends JFrame {
 				dispose();
 			}
 		});
-		Cancel.setBounds(151, 72, 124, 23);
+		Cancel.setBounds(151, 130, 124, 23);
 		contentPane.add(Cancel);
 		
 		JLabel username = new JLabel("Username");
@@ -68,27 +68,33 @@ public class NewUser extends JFrame {
 		JLabel lblPasswords = new JLabel("Password");
 		lblPasswords.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPasswords.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblPasswords.setBounds(10, 41, 81, 20);
+		lblPasswords.setBounds(10, 50, 81, 20);
 		contentPane.add(lblPasswords);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(101, 38, 175, 23);
-		contentPane.add(passwordField);
-		
+		JLabel verifyPasswords = new JLabel("Verify Password");
+		verifyPasswords.setHorizontalAlignment(SwingConstants.CENTER);
+		verifyPasswords.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		verifyPasswords.setBounds(10, 90, 120, 20);
+		contentPane.add(verifyPasswords);
+
 		textField = new JTextField();
-		textField.setBounds(101, 10, 174, 20);
+		textField.setBounds(150, 10, 174, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-
+		passwordField = new JPasswordField();
+		passwordField.setBounds(150, 50, 175, 23);
+		contentPane.add(passwordField);
+		
+		passwordVField = new JPasswordField();
+		passwordVField.setBounds(150, 90, 175, 23);
+		contentPane.add(passwordVField);
+		
 		JButton Submit = new JButton("Submit");
 		Submit.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent arg0) {
-				
-				
-			
-				  	if(textField.getText().length() != 0 && passwordField.getText().length() != 0)
+				  	if(textField.getText().length() != 0 && passwordField.getText().length() != 0 && passwordField.getText().equals(passwordVField.getText()))
 				  	{
 				  		/* 		If username already exist in database
 				  		 *			JOptionPane.showMessageDialog(frame, "Username already exists");
@@ -98,13 +104,16 @@ public class NewUser extends JFrame {
 				  		dispose();
 				  		
 				  	}
-				 	else
-				 	{
+				  	else if(textField.getText().equals("") || passwordField.getText().equals("")){
 				 		JOptionPane.showMessageDialog(frame, "Please provide Username and Password");
+				  	}
+				  	else if(!passwordField.getText().equals(passwordVField.getText()))
+				 	{
+				 		JOptionPane.showMessageDialog(frame, "Passwords do not match");
 				 	}
 			}
 		});
-		Submit.setBounds(10, 72, 124, 23);
+		Submit.setBounds(10, 130, 124, 23);
 		contentPane.add(Submit);
 	}
 }

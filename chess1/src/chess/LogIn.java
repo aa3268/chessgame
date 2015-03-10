@@ -76,7 +76,7 @@ public class LogIn extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JButton newUserButton = new JButton("Create New User");
-		newUserButton.setBackground(SystemColor.menu);
+		//newUserButton.setBackground(SystemColor.menu);
 		newUserButton.setFont(new Font("Arial", Font.BOLD, 10));
 		newUserButton.setBorder(BorderFactory.createEmptyBorder(2,2,2,2));
 		newUserButton.setBounds(52, 227, 140, 23);
