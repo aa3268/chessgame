@@ -66,10 +66,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -96,10 +96,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -126,10 +126,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -156,10 +156,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -186,10 +186,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -216,10 +216,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -246,10 +246,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -276,10 +276,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -307,10 +307,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -337,10 +337,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -367,10 +367,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -398,10 +398,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -428,10 +428,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -458,10 +458,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -488,10 +488,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -518,10 +518,15 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
+				}
+				boolean staleMateW = isStaleMate(kingW, p, "White", "Black");
+				boolean staleMateB = isStaleMate(kingB, p, "Black", "White");
+				if(staleMateW == true || staleMateB == true){
+					displayEndGame("Draw!");
 				}
 				}
 			});
@@ -550,10 +555,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -581,10 +586,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -611,10 +616,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -641,10 +646,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -671,10 +676,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -701,10 +706,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -731,10 +736,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -762,10 +767,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -793,10 +798,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -823,10 +828,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -853,10 +858,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -883,10 +888,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -913,10 +918,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -943,10 +948,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -973,10 +978,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1003,10 +1008,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1033,10 +1038,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1066,10 +1071,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1096,10 +1101,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1126,10 +1131,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1156,10 +1161,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1186,10 +1191,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1217,10 +1222,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1246,10 +1251,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 				
@@ -1278,10 +1283,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1310,10 +1315,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1340,10 +1345,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1369,10 +1374,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1397,10 +1402,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1425,10 +1430,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1453,10 +1458,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1481,10 +1486,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1510,10 +1515,10 @@ public class ButtonBorder extends JPanel {
 			System.out.println("White checkmated "+chkMateW);
 			System.out.println("Black checkmated "+chkMateB);
 			if(chkMateW == true){
-				displayWin("Black");
+				displayEndGame("Black Wins!");
 			}
 			if(chkMateB == true){
-				displayWin("White");
+				displayEndGame("White Wins!");
 			}
 			}
 		});
@@ -1539,10 +1544,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1568,10 +1573,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1598,10 +1603,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1626,10 +1631,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1654,10 +1659,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 				}
 			});
@@ -1682,10 +1687,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}});
 		
@@ -1709,10 +1714,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1738,10 +1743,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1769,10 +1774,15 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
+				}
+				boolean staleMateW = isStaleMate(kingW, p, "White", "Black");
+				boolean staleMateB = isStaleMate(kingB, p, "Black", "White");
+				if(staleMateW == true || staleMateB == true){
+					displayEndGame("Draw!");
 				}
 			}
 		});
@@ -1798,10 +1808,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1826,10 +1836,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1854,10 +1864,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1882,10 +1892,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1910,10 +1920,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -1938,10 +1948,10 @@ public class ButtonBorder extends JPanel {
 				System.out.println("White checkmated "+chkMateW);
 				System.out.println("Black checkmated "+chkMateB);
 				if(chkMateW == true){
-					displayWin("Black");
+					displayEndGame("Black Wins!");
 				}
 				if(chkMateB == true){
-					displayWin("White");
+					displayEndGame("White Wins!");
 				}
 			}
 		});
@@ -2123,7 +2133,7 @@ public class ButtonBorder extends JPanel {
 				{
 					turn = 'W';
 				}
-				System.out.println("swap2");
+				
 			}
 			
 		}
@@ -2541,7 +2551,6 @@ public class ButtonBorder extends JPanel {
 		spot.y = s.y;
 		
 		s.p.available = new Vector<Position>();
-		
 		//All North
 		while(spot.y > 0){
 			Position spotValid = new Position();
@@ -2549,14 +2558,16 @@ public class ButtonBorder extends JPanel {
 			spotValid.y = --spot.y;
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
+				s.p.available.add(spotValid);
 				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
 				{
-					s.p.available.add(spotValid);
-				}
-				else
-				{
+					//s.p.available.add(spotValid);
 					spot.y = -1;
 				}
+				/*else
+				{
+					spot.y = -1;
+				}*/
 			}
 			else
 			{
@@ -2575,14 +2586,16 @@ public class ButtonBorder extends JPanel {
 			spotValid.y = ++spot.y;
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
+				s.p.available.add(spotValid);
 				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
 				{
-					s.p.available.add(spotValid);
-				}
-				else
-				{
+					//s.p.available.add(spotValid);
 					spot.y = 8;
 				}
+				/*else
+				{
+					spot.y = 8;
+				}*/
 			}
 			else
 			{
@@ -2601,14 +2614,16 @@ public class ButtonBorder extends JPanel {
 			spotValid.y = spot.y;
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
+				s.p.available.add(spotValid);
 				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
 				{
-					s.p.available.add(spotValid);
-				}
-				else
-				{
+					//s.p.available.add(spotValid);
 					spot.x = 8;
 				}
+				/*else
+				{
+					spot.x = 8;
+				}*/
 			}
 			else
 			{
@@ -2627,14 +2642,16 @@ public class ButtonBorder extends JPanel {
 			spotValid.y = spot.y;
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
+				s.p.available.add(spotValid);
 				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
 				{
-					s.p.available.add(spotValid);
-				}
-				else
-				{
+					//s.p.available.add(spotValid);
 					spot.x = -1;
 				}
+				/*else
+				{
+					spot.x = -1;
+				}*/
 			}
 			else
 			{
@@ -3015,11 +3032,11 @@ public class ButtonBorder extends JPanel {
 		return checkMate;
 	}
 	
-	public void displayWin(String winner){
+	public void displayEndGame(String result){
 		Object[] options = {"Rematch?", "Return to Lobby"};
-		JFrame frame = new JFrame("Winner");
+		JFrame frame = new JFrame("End of Game");
 		int n = JOptionPane.showOptionDialog(frame,
-				winner + " wins!",
+				result,
 				"End of Match",
 				JOptionPane.YES_NO_OPTION,
 				JOptionPane.INFORMATION_MESSAGE,
@@ -3036,6 +3053,67 @@ public class ButtonBorder extends JPanel {
            
         }
 	}
+	
+	// When user's king whose possible moves would all end up in check.
+		// And other pieces of his/hers can't be moved
+		public boolean isStaleMate(Position k, Position[][] board, String usrColor, String oppColor ){
+			// allPossibleMovesChecked.size() >= k.p.available.size() ---> stalemate 
+			Vector<Integer> allPossibleMovesChecked = new Vector<Integer>(); 
+			Position kMoves = new Position();
+			kMoves = k;
+			getPossibleMoves(kMoves);
+			
+			// compare opponent and king's possible moves
+			for (int i = 0; i < 8; i++) {
+			    for (int j = 0; j < 8; j++) {
+			    	if (board[i][j].p.color.equals(oppColor)){
+			    		// get possible moves
+			    		Position s = new Position();
+						s = board[i][j];
+						getPossibleMoves(s);
+			    		for(int m = 0; m < s.p.available.size(); m++){
+			    			if(s.p.available.size() != 0){
+			    				for(int n = 0; n < kMoves.p.available.size(); n++){
+					    			if(kMoves.p.available.size() != 0){
+					    				// if an opponent possible move can land at king possible move 
+					    				if((s.p.available.get(m).x == kMoves.p.available.get(n).x) && (s.p.available.get(m).y == kMoves.p.available.get(n).y)){
+					    					 allPossibleMovesChecked.add(1);
+					    				}
+					    			}
+			    				}
+			    			}
+			    		}
+			    	}
+			    }
+			}
+			
+			boolean canMove = false;
+			// check if user can't move other pieces
+			for (int i = 0; i < 8; i++) {
+			    for (int j = 0; j < 8; j++) {
+			    	if (board[i][j].p.color.equals(usrColor)){
+			    		// get possible moves
+			    		// get possible moves
+			    		Position s = new Position();
+						s = board[i][j];
+						getPossibleMoves(s);
+						if(s.p.available.size() != 0){	// other piece can move
+							for(int m = 0; m < s.p.available.size(); m++){
+			    				canMove = true;
+			    				return false;
+			    			}
+			    		}
+			    	}
+			    }
+			}
+			// if user's king can't avoid check and user can't move other pieces -> stalemate
+			if( (allPossibleMovesChecked.size() >= k.p.available.size()) && (canMove == false)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
 	
 	
 }
