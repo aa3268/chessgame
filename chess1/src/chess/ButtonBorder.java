@@ -2147,17 +2147,20 @@ public class ButtonBorder extends JPanel {
 		
 		if(s.p.color.equals("Black") && s.y != 7)
 		{
-			if(s.y == 1)
+			if(s.y == 1) //initial pawn position
 			{
-				spot = new Position();
+				spot = new Position(); //2 squares forward
 				spot.y = 3;
 				spot.x = s.x;
 				
 				if(!p[3][spot.x].p.color.equals(s.p.color))
 				{
-					s.p.available.add(spot);
+					if(p[2][s.x].p.color.equals("Empty")){ //Check that there is no piece in both possible squares
+						s.p.available.add(spot);
+					}
 				}
-				spot = new Position();
+				
+				spot = new Position(); //1 square forward
 				spot.y = 2;
 				spot.x = s.x;
 				
@@ -2206,17 +2209,20 @@ public class ButtonBorder extends JPanel {
 		
 		if(s.p.color.equals("White") && s.y != 0)
 		{
-			if(s.y == 6)
+			if(s.y == 6) //Initial position of the pawn
 			{
-				spot = new Position();
+				spot = new Position(); //two squares forward
 				spot.y = 4;
 				spot.x = s.x;
 				
 				if(!p[4][spot.x].p.color.equals(s.p.color))
 				{
-					s.p.available.add(spot);
+					if(p[5][s.x].p.color.equals("Empty")){ //Check that there is no piece in both possible squares
+						s.p.available.add(spot);
+					}
 				}
-				spot = new Position();
+				
+				spot = new Position(); //one square forward
 				spot.y = 5;
 				spot.x = s.x;
 				
