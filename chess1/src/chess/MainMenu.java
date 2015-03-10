@@ -25,7 +25,7 @@ public class MainMenu extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args, String username) {
+	public static void main(String[] args, final String username) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {

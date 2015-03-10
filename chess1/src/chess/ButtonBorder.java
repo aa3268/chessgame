@@ -1963,7 +1963,7 @@ public class ButtonBorder extends JPanel {
 
     private void display() {
     	
-    	String[] options = new String[2];
+    	final String[] options = new String[2];
     	options[0] = new String("Yes");
     	options[1] = new String("No");
         f = new JFrame("ButtonBorder");
@@ -1975,7 +1975,6 @@ public class ButtonBorder extends JPanel {
         
         
         f.addWindowListener(new WindowListener() {
-            @Override
             public void windowClosing(WindowEvent e) {
                 if(JOptionPane.showOptionDialog(f,"Forfeit Match?","", 0,JOptionPane.INFORMATION_MESSAGE,null,options,null) == JOptionPane.OK_OPTION){
                     f.setVisible(false);
@@ -1983,31 +1982,25 @@ public class ButtonBorder extends JPanel {
                 }
             }
             //Unused callbacks
-			@Override
 			public void windowActivated(WindowEvent arg0) {
 				// TODO Auto-generated method stub			
 			}
-			@Override
 			public void windowClosed(WindowEvent arg0) {
 				// TODO Auto-generated method stub
 				
 			}
-			@Override
 			public void windowDeactivated(WindowEvent arg0) {
 				// TODO Auto-generated method stub
 				
 			}
-			@Override
 			public void windowDeiconified(WindowEvent arg0) {
 				// TODO Auto-generated method stub
 				
 			}
-			@Override
 			public void windowIconified(WindowEvent arg0) {
 				// TODO Auto-generated method stub
 				
 			}
-			@Override
 			public void windowOpened(WindowEvent arg0) {
 				// TODO Auto-generated method stub
 				
@@ -2018,7 +2011,6 @@ public class ButtonBorder extends JPanel {
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
 
-            @Override
             public void run() {
                 new ButtonBorder().display();
             }
@@ -2208,17 +2200,20 @@ public class ButtonBorder extends JPanel {
 		
 		if(s.p.color.equals("Black") && s.y != 7)
 		{
-			if(s.y == 1)
+			if(s.y == 1) //initial pawn position
 			{
-				spot = new Position();
+				spot = new Position(); //2 squares forward
 				spot.y = 3;
 				spot.x = s.x;
 				
 				if(!p[3][spot.x].p.color.equals(s.p.color))
 				{
-					s.p.available.add(spot);
+					if(p[2][s.x].p.color.equals("Empty")){ //Check that there is no piece in both possible squares
+						s.p.available.add(spot);
+					}
 				}
-				spot = new Position();
+				
+				spot = new Position(); //1 square forward
 				spot.y = 2;
 				spot.x = s.x;
 				
@@ -2267,17 +2262,20 @@ public class ButtonBorder extends JPanel {
 		
 		if(s.p.color.equals("White") && s.y != 0)
 		{
-			if(s.y == 6)
+			if(s.y == 6) //Initial position of the pawn
 			{
-				spot = new Position();
+				spot = new Position(); //two squares forward
 				spot.y = 4;
 				spot.x = s.x;
 				
 				if(!p[4][spot.x].p.color.equals(s.p.color))
 				{
-					s.p.available.add(spot);
+					if(p[5][s.x].p.color.equals("Empty")){ //Check that there is no piece in both possible squares
+						s.p.available.add(spot);
+					}
 				}
-				spot = new Position();
+				
+				spot = new Position(); //one square forward
 				spot.y = 5;
 				spot.x = s.x;
 				
