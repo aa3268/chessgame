@@ -6,6 +6,8 @@ import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.util.Vector;
 
 import javax.swing.ImageIcon;
@@ -19,7 +21,7 @@ import javax.swing.JPanel;
 public class ButtonBorder extends JPanel {
 	  private static final int N = 8;
 	  private static final int SIZE = 76;
-	  
+	  static JFrame f;
 	  public char turn = 'W';
 	  Position[][] p = new Position[8][8];
 	  
@@ -30,7 +32,7 @@ public class ButtonBorder extends JPanel {
 	  public ButtonBorder() {
 		  //GridLayout gridLayout = new GridLayout(N, N);
 		 
-		  this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
+		 this.setPreferredSize(new Dimension(N * SIZE, N * SIZE));
 		
 		setLayout(new GridLayout(0, 8, 8, 8));
 		
@@ -1960,17 +1962,63 @@ public class ButtonBorder extends JPanel {
 	}
 
     private void display() {
-        JFrame f = new JFrame("ButtonBorder");
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    	
+    	String[] options = new String[2];
+    	options[0] = new String("Yes");
+    	options[1] = new String("No");
+        f = new JFrame("ButtonBorder");
+        f.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         f.getContentPane().add(this);
         f.pack();
         f.setLocationRelativeTo(null);
         f.setVisible(true);
+        
+        
+        f.addWindowListener(new WindowListener() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                if(JOptionPane.showOptionDialog(f,"Forfeit Match?","", 0,JOptionPane.INFORMATION_MESSAGE,null,options,null) == JOptionPane.OK_OPTION){
+                    f.setVisible(false);
+                    f.dispose();
+                }
+            }
+            //Unused callbacks
+			@Override
+			public void windowActivated(WindowEvent arg0) {
+				// TODO Auto-generated method stub			
+			}
+			@Override
+			public void windowClosed(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			@Override
+			public void windowDeactivated(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			@Override
+			public void windowDeiconified(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			@Override
+			public void windowIconified(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			@Override
+			public void windowOpened(WindowEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+        });
     }
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
 
+            @Override
             public void run() {
                 new ButtonBorder().display();
             }
@@ -1978,14 +2026,10 @@ public class ButtonBorder extends JPanel {
     }
    
     /*
-    * When user clicks on a piece on the board getPositions() will be called
-    * 
-    * There will be a 2 dimensional array of positions for the buttons on the board and
-    * we'll know which ones to highlight and which ones to disable using
-    * Vector<Position> available attribute of a piece
-    * 
-    * Currently it only prints out the available positions of pawn and knight
-    */
+     * Calls a piece's corresponding Positions() function to find the spot it can move to
+     * Enables only the positions the selected pieces can go to, disables the rest.
+     * 
+     */
 	public void getPositions(Position s)
 	{
 		
@@ -2037,6 +2081,10 @@ public class ButtonBorder extends JPanel {
 		
 	}
 	
+	/*
+	 * Swaps attributes of two Position Objects
+	 * 
+	 */
 	public void Swap (Position o, Position n)
 	{
 		n.p.button.setIcon(o.p.button.getIcon());
@@ -2063,6 +2111,10 @@ public class ButtonBorder extends JPanel {
 
 
 	}
+	
+	/*
+	 * Disables all the buttons
+	 */
 	public void Disable()
 	{
 		for(int i = 0; i < 8; i++)
@@ -2074,6 +2126,15 @@ public class ButtonBorder extends JPanel {
 		}	
 	}
 	
+	
+	/*
+	 * This function is called whenever a button is clicked
+	 * Function gets the Piece located in p[y][x] and calls getPositions() for that piece
+	 * And enables only the positions the piece can go to.
+	 * If Position varibles one and two are not empty then calls Swap to move the piece in one to two
+	 * If one == two then re-enables all buttons
+	 * 
+	 */
 	public void PossibleMoves(int y, int x)
 	{
 		if(!p[y][x].p.ident.equals("Empty") && (turn == p[y][x].p.color.charAt(0)))
@@ -2147,20 +2208,17 @@ public class ButtonBorder extends JPanel {
 		
 		if(s.p.color.equals("Black") && s.y != 7)
 		{
-			if(s.y == 1) //initial pawn position
+			if(s.y == 1)
 			{
-				spot = new Position(); //2 squares forward
+				spot = new Position();
 				spot.y = 3;
 				spot.x = s.x;
 				
 				if(!p[3][spot.x].p.color.equals(s.p.color))
 				{
-					if(p[2][s.x].p.color.equals("Empty")){ //Check that there is no piece in both possible squares
-						s.p.available.add(spot);
-					}
+					s.p.available.add(spot);
 				}
-				
-				spot = new Position(); //1 square forward
+				spot = new Position();
 				spot.y = 2;
 				spot.x = s.x;
 				
@@ -2209,20 +2267,17 @@ public class ButtonBorder extends JPanel {
 		
 		if(s.p.color.equals("White") && s.y != 0)
 		{
-			if(s.y == 6) //Initial position of the pawn
+			if(s.y == 6)
 			{
-				spot = new Position(); //two squares forward
+				spot = new Position();
 				spot.y = 4;
 				spot.x = s.x;
 				
 				if(!p[4][spot.x].p.color.equals(s.p.color))
 				{
-					if(p[5][s.x].p.color.equals("Empty")){ //Check that there is no piece in both possible squares
-						s.p.available.add(spot);
-					}
+					s.p.available.add(spot);
 				}
-				
-				spot = new Position(); //one square forward
+				spot = new Position();
 				spot.y = 5;
 				spot.x = s.x;
 				
@@ -2871,9 +2926,8 @@ public class ButtonBorder extends JPanel {
 		
 	}
 	
-	
+	//Used in isCheckMate
 	public void getPossibleMoves(Position s){
-		//Added some basic first moves
 		switch(s.p.ident)
 		{
 		case("Pawn"):
@@ -2898,7 +2952,6 @@ public class ButtonBorder extends JPanel {
 		}
 	}
 		
-	
 	
 	public static Position getKing(Position[][] board, String usrColor){
 		for (int i = 0; i < 8; i++) {
@@ -3050,8 +3103,11 @@ public class ButtonBorder extends JPanel {
 				options[0]); //default button title
 		if (n == JOptionPane.YES_OPTION) {
            // Rematch
+			ButtonBorder.main(null);
+			f.dispose();
         } else if (n == JOptionPane.NO_OPTION) {
         	// Return to Lobby
+        	f.dispose();
         } else if (n == JOptionPane.CANCEL_OPTION) {
         	
         } else {
@@ -3060,8 +3116,8 @@ public class ButtonBorder extends JPanel {
 	}
 	
 	// When user's king whose possible moves would all end up in check.
-		// And other pieces of his/hers can't be moved
-		public boolean isStaleMate(Position k, Position[][] board, String usrColor, String oppColor ){
+	// And other pieces of his/hers can't be moved
+	public boolean isStaleMate(Position k, Position[][] board, String usrColor, String oppColor ){
 			// allPossibleMovesChecked.size() >= k.p.available.size() ---> stalemate 
 			Vector<Integer> allPossibleMovesChecked = new Vector<Integer>(); 
 			Position kMoves = new Position();
