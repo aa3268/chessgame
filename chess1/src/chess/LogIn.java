@@ -20,15 +20,19 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JPasswordField;
 
-
+/* 
+ * Log In Interface
+ * 
+ */
 @SuppressWarnings("serial")
 public class LogIn extends JFrame {
 
 	private JPanel contentPane;
 	public final JTextField text;
-	public final JTextField text1;
 	public static LogIn frame;
+	private JPasswordField passwordField;
 	/**
 	 * Launch the application.
 	 */
@@ -63,12 +67,6 @@ public class LogIn extends JFrame {
 		text.setColumns(10);
 		text.setText("");
 		
-		text1 = new JTextField();
-		text1.setBounds(108, 85, 86, 20);
-		contentPane.add(text1);
-		text1.setColumns(10);
-		text1.setText("");
-		
 		JLabel lblNewLabel = new JLabel("Username");
 		lblNewLabel.setBounds(10, 57, 88, 14);
 		contentPane.add(lblNewLabel);
@@ -84,10 +82,8 @@ public class LogIn extends JFrame {
 		newUserButton.setBounds(52, 227, 140, 23);
 		newUserButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				frame.setVisible(false);
-				JFrame newUser = new JFrame();
-				newUser.setBounds(100,100,300,200);
-				newUser.setVisible(true);
+				NewUser.main(null);
+				
 			}
 		});
 		contentPane.add(newUserButton);
@@ -97,10 +93,15 @@ public class LogIn extends JFrame {
 		textArea.setBounds(10, 144, 224, 72);
 		contentPane.add(textArea);
 		
+
+		passwordField = new JPasswordField();
+		passwordField.setBounds(108, 85, 86, 20);
+		contentPane.add(passwordField);
+		
 		JButton login = new JButton("Log In");
 		login.addActionListener(new ActionListener() {
 			Map<String,String> m = new HashMap<String, String>();
-			@SuppressWarnings("static-access")
+			@SuppressWarnings({ "static-access", "deprecation" })
 			public void actionPerformed(ActionEvent arg0) {
 				try{
 					URL oracle = new URL("https://www.cs.drexel.edu/~aa3268/userData");
@@ -113,25 +114,22 @@ public class LogIn extends JFrame {
 			        
 			        while(inputLine != null)
 			        {
-				        //inputLine = in.readLine();
-			        	//System.out.println(inputLine);
 			        	tokens = inputLine.split(",");
 			        	id = tokens[0].trim();
 			        	password = tokens[3].trim();
 			        	m.put(id, password);
 			        	inputLine = in.readLine();
 			        }	
-			 
-					//System.out.println(m.toString());
+			
 				in.close();
 				}
 				catch(Exception e)
 				{
 					e.printStackTrace();
 				}
-				if(!text.getText().equals("") && !text1.getText().equals(""))
+				if(!text.getText().equals("") && !passwordField.getText().equals(""))
 				{
-					if(m.get(text.getText()).equals(text1.getText()))
+					if(m.get(text.getText()).equals(passwordField.getText()))
 					{
 						MainMenu k;
 						try {
@@ -151,11 +149,11 @@ public class LogIn extends JFrame {
 							
 					}
 				}
-				else if(text.getText().equals("") && !text1.getText().equals(""))
+				else if(text.getText().equals("") && !passwordField.getText().equals(""))
 				{
 					textArea.setText("Pleaser Enter Username");
 				}
-				else if(text1.getText().equals("") && !text.getText().equals(""))
+				else if(passwordField.getText().equals("") && !text.getText().equals(""))
 				{
 					textArea.setText("Pleaser Enter Password");
 				}
@@ -172,6 +170,7 @@ public class LogIn extends JFrame {
 		});
 		login.setBounds(71, 117, 92, 23);
 		contentPane.add(login);
+		
 
 	}
 }
