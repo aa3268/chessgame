@@ -43,7 +43,7 @@ public class MainMenu extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args, String username) {
+	public static void main(String[] args, final String username) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -59,12 +59,12 @@ public class MainMenu extends JFrame {
 	/*
 	 * Create the frame.
 	 */
-	public MainMenu(String username) throws TembooException, UnsupportedEncodingException {
+	public MainMenu(final String username) throws TembooException, UnsupportedEncodingException {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		
 		
-		TembooSession session = new TembooSession("aa3268", "myFirstApp", "522716fffec34ab1961d61113bea0f34");
+		final TembooSession session = new TembooSession("aa3268", "myFirstApp", "522716fffec34ab1961d61113bea0f34");
 		
 		AccountLogin accountLoginChoreo = new AccountLogin(session);
 		AccountLoginInputSet accountLoginInputs = accountLoginChoreo.newInputSet();
@@ -76,7 +76,7 @@ public class MainMenu extends JFrame {
 		accountLoginInputs.set_Password("05192904");
 
 		// Execute Choreo
-		AccountLoginResultSet accountLoginResults = accountLoginChoreo.execute(accountLoginInputs);
+		final AccountLoginResultSet accountLoginResults = accountLoginChoreo.execute(accountLoginInputs);
 		
 		
 		DownloadBase64EncodedFile downloadBase64EncodedFileChoreo = new DownloadBase64EncodedFile(session);
