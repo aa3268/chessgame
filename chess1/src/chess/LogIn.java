@@ -83,7 +83,6 @@ public class LogIn extends JFrame {
 		newUserButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				NewUser.main(null);
-				
 			}
 		});
 		contentPane.add(newUserButton);
@@ -100,7 +99,7 @@ public class LogIn extends JFrame {
 		
 		JButton login = new JButton("Log In");
 		login.addActionListener(new ActionListener() {
-			Map<String,String> m = new HashMap<String, String>();
+			Map<String,String> m = new HashMap<String, String>(); //holds username and password
 			@SuppressWarnings({ "static-access", "deprecation" })
 			public void actionPerformed(ActionEvent arg0) {
 				try{
@@ -121,15 +120,19 @@ public class LogIn extends JFrame {
 			        	inputLine = in.readLine();
 			        }	
 			
-				in.close();
+			        in.close();
 				}
 				catch(Exception e)
 				{
 					e.printStackTrace();
 				}
+				
 				if(!text.getText().equals("") && !passwordField.getText().equals(""))
 				{
-					if(m.get(text.getText()).equals(passwordField.getText()))
+					if(!m.containsKey(text.getText())){
+						textArea.setText("Username does not exist");
+					}
+					else if(m.get(text.getText()).equals(passwordField.getText()))
 					{
 						MainMenu k;
 						try {
@@ -138,39 +141,31 @@ public class LogIn extends JFrame {
 							k.main(args, text.getText());
 							frame.dispose();
 						} catch(Exception e){
-								e.printStackTrace();
-								
-							}
+							e.printStackTrace();
+						}
 					}
 					else
 					{
-						
+						textArea.setText("Wrong password, try again");
 						System.out.println(m.get(text.getText()));
-							
 					}
 				}
 				else if(text.getText().equals("") && !passwordField.getText().equals(""))
 				{
-					textArea.setText("Pleaser Enter Username");
+					textArea.setText("Please Enter Username");
 				}
 				else if(passwordField.getText().equals("") && !text.getText().equals(""))
 				{
-					textArea.setText("Pleaser Enter Password");
+					textArea.setText("Please Enter Password");
 				}
 				else
 				{
-					textArea.setText("Pleaser Enter Username and Password");
+					textArea.setText("Please Enter Username and Password");
 				}
-					
-					
-					
-				}
-			
-				
+			}
 		});
 		login.setBounds(71, 117, 92, 23);
 		contentPane.add(login);
 		
-
 	}
 }
