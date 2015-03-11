@@ -65,8 +65,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+			    
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -96,8 +96,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -127,8 +127,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -158,8 +158,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -189,8 +189,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -220,8 +220,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -251,8 +251,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -282,8 +282,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -314,8 +314,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -345,8 +345,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -376,8 +376,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -408,8 +408,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -439,8 +439,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -470,8 +470,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -501,8 +501,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -532,8 +532,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteB = checkPromotionBlack(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -569,8 +569,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -600,8 +600,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -630,8 +630,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -660,8 +660,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -690,8 +690,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -720,8 +720,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -750,8 +750,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -781,8 +781,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -812,8 +812,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -842,8 +842,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -872,8 +872,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -902,8 +902,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -932,8 +932,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -962,8 +962,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -992,8 +992,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1022,8 +1022,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1052,8 +1052,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1085,8 +1085,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1115,8 +1115,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1145,8 +1145,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1175,8 +1175,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1205,8 +1205,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1236,8 +1236,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1265,8 +1265,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1297,8 +1297,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1329,8 +1329,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1359,8 +1359,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1388,8 +1388,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1416,8 +1416,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1444,8 +1444,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1472,8 +1472,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1500,8 +1500,8 @@ public class ButtonBorder extends JPanel {
 				Position kingB = getKing(p, "Black");
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1530,8 +1530,8 @@ public class ButtonBorder extends JPanel {
 			Position promoteW = checkPromotionWhite(p);
 			boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 			boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-			System.out.println("White checkmated "+chkMateW);
-			System.out.println("Black checkmated "+chkMateB);
+			     
+			     
 			if(chkMateW == true){
 				displayEndGame("Black Wins!");
 			}
@@ -1560,8 +1560,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1590,8 +1590,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1621,8 +1621,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1650,8 +1650,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1679,8 +1679,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1708,8 +1708,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1736,8 +1736,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1766,8 +1766,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1798,8 +1798,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1833,8 +1833,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1862,8 +1862,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1891,8 +1891,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1920,8 +1920,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1949,8 +1949,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+				     
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -1978,8 +1978,8 @@ public class ButtonBorder extends JPanel {
 				Position promoteW = checkPromotionWhite(p);
 				boolean chkMateW = isCheckMate(kingW, p, "White", "Black");
 				boolean chkMateB = isCheckMate(kingB, p, "Black", "White");
-				System.out.println("White checkmated "+chkMateW);
-				System.out.println("Black checkmated "+chkMateB);
+				     
+			
 				if(chkMateW == true){
 					displayEndGame("Black Wins!");
 				}
@@ -2084,7 +2084,7 @@ public class ButtonBorder extends JPanel {
 		
 		int x[] = new int[s.p.available.size()];
 		int y[] = new int[s.p.available.size()];
-		System.out.println("available "+s.p.available);
+		//System.out.println("available "+s.p.available);
 		for(int i = 0; i < s.p.available.size(); i++)
 		{
 			x[i] = s.p.available.get(i).x;
@@ -2096,7 +2096,7 @@ public class ButtonBorder extends JPanel {
 		Disable();
 		for(int i = 0; i < s.p.available.size(); i++)
 		{
-			System.out.println(y[i] + " " + x[i]);
+			//System.out.println(y[i] + " " + x[i]);
 			p[y[i]][x[i]].p.button.setEnabled(true);
 		}
 		p[s.y][s.x].p.button.setEnabled(true);
@@ -3116,128 +3116,170 @@ public class ButtonBorder extends JPanel {
 		return null;
 		
 	}
-	
+
 	// Check if user's king is in Checkmate
-	public boolean isCheckMate(Position k, Position[][] board, String usrColor, String oppColor ){
-		boolean check = false;	// king is in danger
-		boolean checkMate = true;	// king can't get out of check
-		Vector<Position> checkingP = new Vector<Position>(); // piece that can put king in check
-		
-		// if king is captured, opponent wins
-		if(k == null){
-			return checkMate;
-		}
-		
-		// Is king in check?
-		// for pieces with opponent's color:
-		for (int i = 0; i < 8; i++) {
-		    for (int j = 0; j < 8; j++) {
-		    	if (board[i][j].p.color.equals(oppColor)){
-		    		// get possible moves
-		    		Position s = new Position();
-					s = board[i][j];
-					getPossibleMoves(s);
-					if(s.p.available.size() != 0)
-	    			{
-						for(int m = 0; m < s.p.available.size(); m++)
-						{
-							//System.out.println(s.p.color+" "+s.p.ident+" avail "+ s.p.available.get(m).x+" "+s.p.available.get(m).y);
-				    		//System.out.println("k "+ k.x+" "+k.y);
-		    				// if square in opponent's possible moves has user's king
-		    				if( (s.p.available.get(m).x == k.x) && (s.p.available.get(m).y == k.y)){
-		    					// king is in check
-		    					check = true;
-		    					checkingP.add(s);
-		    				}
-		    			}
-		    		}
-		    	}
-		    }
-		}
-		//System.out.println("check "+check);
-		if(check == false){
-			return false;
-		}
-		else{
-		// Can king get out of check?
-		// for pieces with user's color:
+		public boolean isCheckMate(Position k, Position[][] board, String usrColor, String oppColor ){
+			boolean check = false;	// king is in danger
+			boolean checkMate = true;	// king can't get out of check
+			Vector<Position> checkingP = new Vector<Position>(); // piece that can put king in check
+			
+			// if king is captured, opponent wins
+			if(k == null){
+				return checkMate;
+			}
+			
+			// Is king in check?
+			// for pieces with opponent's color:
 			for (int i = 0; i < 8; i++) {
 			    for (int j = 0; j < 8; j++) {
-			    	if (board[i][j].p.color.equals(usrColor)){
+			    	if (board[i][j].p.color.equals(oppColor)){
 			    		// get possible moves
 			    		Position s = new Position();
 						s = board[i][j];
-						//System.out.println("user piece "+ s.x+" "+s.y);
 						getPossibleMoves(s);
-			    		if(s.p.available.size() != 0){
-			    			for(int m = 0; m < s.p.available.size(); m++){
-			    				// see if square in user's possible moves has opponent checking piece 
-			    				//(checking piece can be captured)
-			    				for(int n = 0; n < checkingP.size(); n++){
-			    					if(s.p.ident.equals("Pawn")){	// Pawns can only capture diagonally
-			    						if((s.p.available.get(m).x == s.x+1 || s.p.available.get(m).x == s.x-1) && (s.p.available.get(m).y == s.y+1 || s.p.available.get(m).y == s.y-1)){
-			    							if( (s.p.available.get(m).x == checkingP.get(n).x) && (s.p.available.get(m).y == checkingP.get(n).y)){
-			    								//System.out.println("chkmate1 Pawn s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
-					    						//System.out.println("chkmate1 Pawn checkinP "+checkingP.get(n).x+" "+ checkingP.get(n).y);
-			    								checkMate = false;
-					    					}
-			    						}
-			    					}
-			    					else{
-			    						if( (s.p.available.get(m).x == checkingP.get(n).x) && (s.p.available.get(m).y == checkingP.get(n).y)){
-			    							//System.out.println("chkmate1 s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
-			    							//System.out.println("chkmate1 checkinP "+checkingP.get(n).x+" "+ checkingP.get(n).y);
-			    							checkMate = false;
-			    						}
-			    					}
-			    				// if square in user's possible moves is a square in the checking piece's possible move to the king 
-			    					// (path to king can be blocked)
-			    					if( (s.p.available.get(m).x == checkingP.get(n).p.available.get(m).x) && (s.p.available.get(m).y == checkingP.get(n).p.available.get(m).y)){
-			    						//System.out.println("chkmate2 s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
-			    						//System.out.println("chkmate2 checkinP "+checkingP.get(n).p.available.get(m).x+" "+ checkingP.get(n).p.available.get(m).y);
-			    						checkMate = false;
-			    					}
+						if(s.p.available.size() != 0){
+							for(int m = 0; m < s.p.available.size(); m++){
+			    				// if square in opponent's possible moves has user's king
+			    				if( (s.p.available.get(m).x == k.x) && (s.p.available.get(m).y == k.y)){
+			    					// king is in check
+			    					check = true;
+			    					checkingP.add(s);
 			    				}
 			    			}
 			    		}
 			    	}
 			    }
 			}
-		// if possible moves of user's king is "Empty" square
-		// and move is not in checking piece's path (king can move out of the way)
-			
-			// used to see if all king's move's are in checking path
-			Vector<Integer> movesInChekPath = new Vector<Integer>(); 
-			Position s = new Position();
-			s = k;
-			getPossibleMoves(s);
-			// get king's possible moves
-			if(s.p.available.size() != 0){
-				for(int m = 0; m < s.p.available.size(); m++){
-					for(int n = 0; n < checkingP.size(); n++){
-						Position checkP = new Position();
-						checkP = checkingP.get(n);
-						getPossibleMoves(checkP);
-						// see if a king possible move is in the path of a checking piece's possible move
+			if(check == false){
+				return false;
+			}
+			else{
+				Object[] options = {"Ok"};
+				JFrame frame = new JFrame("Check");
+				int f = JOptionPane.showOptionDialog(frame,
+						usrColor+" in Check!",
+						"Check",
+						JOptionPane.YES_NO_OPTION,
+						JOptionPane.INFORMATION_MESSAGE,
+						null,     //do not use a custom Icon
+						options,  //the titles of buttons
+						options[0]); //default button title
+				if (f == JOptionPane.YES_OPTION) {
+					// do nothing
+		        }
+			// Can king get out of check?
+				// get paths to king
+				Vector<Vector<Position>> pathsToKing = new Vector<Vector<Position>>(); 
+				for(int n = 0; n < checkingP.size(); n++){
+					Position checkP = new Position();
+					checkP = checkingP.get(n);
+					getPossibleMoves(checkP);
+				// see if king is in path
 						for(int i = 0; i < checkP.p.available.size(); i++){
-							if( (s.p.available.get(m).x == checkP.p.available.get(i).x) && (s.p.available.get(m).y == checkP.p.available.get(i).y) && board[s.p.available.get(m).x][s.p.available.get(m).y].p.color.equals("Empty")){
-								//System.out.println("chkmate3 s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
-	    						//System.out.println("chkmate3 checkinP "+checkP.p.available.get(i).x+" "+ checkP.p.available.get(i).y);
-	    						//System.out.println("chkmate3 color "+board[s.p.available.get(m).x][s.p.available.get(m).y].p.color);
-								movesInChekPath.add(1);
+							if( (k.x == checkP.p.available.get(i).x) && (k.y == checkP.p.available.get(i).y)){
+								Vector<Position> pathToKing = new Vector<Position>();
+								for(int j = i; j > 0 ; j--){
+									int pathX = checkP.p.available.get(j).x;
+									int pathY = checkP.p.available.get(j).y;
+									int pathX_prev = checkP.p.available.get(j-1).x;
+									int pathY_prev = checkP.p.available.get(j-1).y;
+									if( (Math.abs(pathX-pathX_prev) <= 1) && ((Math.abs(pathY-pathY_prev) <= 1)) ){
+										pathToKing.add(checkP.p.available.get(j-1));
+									}
+								}
+								//System.out.println("path to King "+ pathToKing);
+								pathsToKing.add(pathToKing);
+							}
+
+						}
+				}
+				
+				
+			// for pieces with user's color:
+				for (int i = 0; i < 8; i++) {
+				    for (int j = 0; j < 8; j++) {
+				    	if (board[i][j].p.color.equals(usrColor)){
+				    		// get possible moves
+				    		Position s = new Position();
+							s = board[i][j];
+							//System.out.println("user piece "+ s.x+" "+s.y);
+							getPossibleMoves(s);
+				    		if(s.p.available.size() != 0){
+				    			for(int m = 0; m < s.p.available.size(); m++){
+				    				// see if square in user's possible moves has opponent checking piece 
+				    				//(checking piece can be captured)
+				    				for(int n = 0; n < checkingP.size(); n++){
+				    					if(s.p.ident.equals("Pawn")){	// Pawns can only capture diagonally
+				    						if((s.p.available.get(m).x == s.x+1 || s.p.available.get(m).x == s.x-1) && (s.p.available.get(m).y == s.y+1 || s.p.available.get(m).y == s.y-1)){
+				    							if( (s.p.available.get(m).x == checkingP.get(n).x) && (s.p.available.get(m).y == checkingP.get(n).y)){
+				    								//System.out.println("chkmate1 Pawn s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
+						    						//System.out.println("chkmate1 Pawn checkinP "+checkingP.get(n).x+" "+ checkingP.get(n).y);
+				    								checkMate = false;
+						    					}
+				    						}
+				    					}
+				    					else{
+				    						if( (s.p.available.get(m).x == checkingP.get(n).x) && (s.p.available.get(m).y == checkingP.get(n).y)){
+				    							//System.out.println("chkmate1 s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
+				    							//System.out.println("chkmate1 checkinP "+checkingP.get(n).x+" "+ checkingP.get(n).y);
+				    							checkMate = false;
+				    						}
+				    					}
+				    				// if square in user's possible moves is a square in the checking piece's possible move to the king 
+				    					// (path to king can be blocked)
+				    					//System.out.println("supposed to block?");
+				    					//System.out.println("chkmate2 s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
+			    						//System.out.println("chkmate2 checkinP "+checkingP.get(n).p.available.get(m).x+" "+ checkingP.get(n).p.available.get(m).y);
+			    						for(int p = 0; p < pathsToKing.size(); p++){
+			    							Vector<Position> pth = pathsToKing.get(p);
+			    							for(int p2 = 0; p2 < pth.size(); p2++){
+			    								if( (s.p.available.get(m).x == pth.get(p2).x) && (s.p.available.get(m).y == pth.get(p2).y)){
+						    						System.out.println("block s "+s.p.available.get(m).x+" "+s.p.available.get(m).y);
+						    						System.out.println("block p "+pth.get(p2).x+" "+pth.get(p2).y);
+						    						//System.out.println("chkmate2 checkinP "+checkingP.get(n).p.available.get(m).x+" "+ checkingP.get(n).p.available.get(m).y);
+						    						checkMate = false;
+						    					}
+			    							}
+			    						}
+				    				}
+				    			}
+				    		}
+				    	}
+				    }
+				}
+			// if possible moves of user's king is "Empty" square
+			// and move is not in checking piece's path (king can move out of the way)
+				
+				// used to see if all king's move's are in checking path
+				Vector<Integer> movesInChekPath = new Vector<Integer>(); 
+				Position s = new Position();
+				s = k;
+				getPossibleMoves(s);
+				// get king's possible moves
+				if(s.p.available.size() != 0){
+					for(int m = 0; m < s.p.available.size(); m++){
+						for(int n = 0; n < checkingP.size(); n++){
+							Position checkP = new Position();
+							checkP = checkingP.get(n);
+							getPossibleMoves(checkP);
+							// see if a king possible move is in the path of a checking piece's possible move
+							for(int i = 0; i < checkP.p.available.size(); i++){
+								if( (s.p.available.get(m).x == checkP.p.available.get(i).x) && (s.p.available.get(m).y == checkP.p.available.get(i).y) && board[s.p.available.get(m).x][s.p.available.get(m).y].p.color.equals("Empty")){
+									movesInChekPath.add(1);
+								}
 							}
 						}
 					}
 				}
+				//System.out.println("path "+movesInChekPath);
+				if(movesInChekPath.size() == s.p.available.size()){
+					// if all king's move's are in a checking piece path
+					checkMate = true;
+				}
 			}
-			if(movesInChekPath.size() == s.p.available.size()){
-				// if all king's move's are in a checking piece path
-				checkMate = true;
-			}
+			
+			return checkMate;
 		}
-		
-		return checkMate;
-	}
 	
 	public void displayEndGame(String result){
 		Object[] options = {"Rematch?", "Return to Lobby"};
