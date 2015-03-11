@@ -2110,10 +2110,70 @@ public class ButtonBorder extends JPanel {
 	 */
 	public void Swap (Position o, Position n)
 	{
-		n.p.button.setIcon(o.p.button.getIcon());
-		n.p.ident = o.p.ident;
-		n.p.color = o.p.color;
-		
+		if(o.p.ident.equals("Pawn") && o.p.color.equals("White") && n.y == 0)
+		{
+			String[] pieces = new String[4];
+			pieces[0] = "Queen";
+			pieces[1] = "Bishop";
+			pieces[2] = "Knight";
+			pieces[3] = "Rook";
+			
+			String promotion = (String)JOptionPane.showInputDialog(
+                    f,
+                    "Select the piece you'd like.",
+                    "Promotion",
+                    JOptionPane.PLAIN_MESSAGE,
+                    null,
+                    pieces,
+                    "Queen");
+			
+			
+			if(promotion == null)
+			{
+				n.p.ident = o.p.ident;
+				n.p.button.setIcon(o.p.button.getIcon());
+			}
+			else
+			{
+				n.p.ident = promotion;
+				n.p.button.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/white_"+ promotion.toLowerCase() +".png" )));
+			}
+			n.p.color = o.p.color;
+		}
+		else if(o.p.ident.equals("Pawn") && o.p.color.equals("Black") && n.y == 7 )
+		{
+			String[] pieces = new String[4];
+			pieces[0] = "Queen";
+			pieces[1] = "Bishop";
+			pieces[2] = "Knight";
+			pieces[3] = "Rook";
+			
+			String promotion = (String)JOptionPane.showInputDialog(
+                    f,
+                    "Select the piece you'd like.",
+                    "Promotion",
+                    JOptionPane.PLAIN_MESSAGE,
+                    null,
+                    pieces,
+                    "Queen");	
+			if(promotion == null)
+			{
+				n.p.ident = o.p.ident;
+				n.p.button.setIcon(o.p.button.getIcon());
+			}
+			else
+			{
+				n.p.ident = promotion;
+				n.p.button.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/black_"+ promotion.toLowerCase() +".png" )));
+			}
+			n.p.color = o.p.color;
+		}
+		else
+		{
+			n.p.button.setIcon(o.p.button.getIcon());
+			n.p.ident = o.p.ident;
+			n.p.color = o.p.color;
+		}
 		
 		o.p.button.setIcon(new ImageIcon(ButtonBorder.class.getResource("/pieces/empty.png")));
 		o.p.ident = "Empty";
@@ -2229,7 +2289,7 @@ public class ButtonBorder extends JPanel {
 		Position spot;
 		s.p.available = new Vector<Position>();
 		
-		if(s.p.color.equals("Black") && s.y != 7)
+		if(s.p.color.equals("Black"))
 		{
 			if(s.y == 1) //initial pawn position
 			{
@@ -2253,10 +2313,34 @@ public class ButtonBorder extends JPanel {
 					s.p.available.add(spot);
 				}
 				
+				if(s.x - 1 >= 0)
+				{
+					if(p[s.y+1][s.x-1].p.color.equals("White"))
+					{
+						spot = new Position();
+						spot.y = s.y + 1;
+						spot.x = s.x - 1;
+						s.p.available.add(spot);
+					}
+				}
+				if(s.x + 1 <= 7)
+				{
+					if(p[s.y+1][s.x+1].p.color.equals("White"))
+					{
+						spot = new Position();
+						spot.y = s.y + 1;
+						spot.x = s.x + 1;
+						s.p.available.add(spot);
+					}
+					
+				}
+				
+				
+				
 			}
 			else
 			{
-				if(s.y <= 7)
+				if(s.y < 7)
 				{
 					if(p[s.y+1][s.x].p.color.equals("Empty") )
 					{
@@ -2291,7 +2375,7 @@ public class ButtonBorder extends JPanel {
 			}
 		}
 		
-		if(s.p.color.equals("White") && s.y != 0)
+		if(s.p.color.equals("White"))
 		{
 			if(s.y == 6) //Initial position of the pawn
 			{
@@ -2315,10 +2399,32 @@ public class ButtonBorder extends JPanel {
 					s.p.available.add(spot);
 				}
 				
+				if(s.x - 1 >= 0)
+				{
+					if(p[s.y-1][s.x-1].p.color.equals("Black"))
+					{
+						spot = new Position();
+						spot.y = s.y - 1;
+						spot.x = s.x - 1;
+						s.p.available.add(spot);
+					}
+				}
+				if(s.x + 1 <= 7)
+				{
+					if(p[s.y-1][s.x+1].p.color.equals("Black"))
+					{
+						spot = new Position();
+						spot.y = s.y - 1;
+						spot.x = s.x + 1;
+						s.p.available.add(spot);
+					}
+					
+				}
+				
 			}
 			else
 			{
-				if(s.y >= 0)
+				if(s.y > 0)
 				{
 					if(p[s.y-1][s.x].p.color.equals("Empty") )
 					{
@@ -2354,6 +2460,7 @@ public class ButtonBorder extends JPanel {
 		}
 		
 	}
+	
 	public void KingPositions(Position s){
 		Position spot;
 		s.p.available = new Vector<Position>();
@@ -2439,6 +2546,7 @@ public class ButtonBorder extends JPanel {
 		}
 		
 	}
+	
 	public void QueenPositions(Position s){
 		// pt to increment or decrement
 		Position spot;	
@@ -2454,7 +2562,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spot);
-				if((p[spot.y][spot.x].p.color.equals("Black")))
+				if((p[spot.y][spot.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 				{
 					i = 9;
 					j = 9;
@@ -2476,7 +2584,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spot);
-				if((p[spot.y][spot.x].p.color.equals("Black")))
+				if((p[spot.y][spot.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 				{
 					i = -2;
 					j = 9;
@@ -2500,7 +2608,7 @@ public class ButtonBorder extends JPanel {
 			{
 				//System.out.println(i + " " + j + " " + p[spot.y][spot.x].p.color);
 				s.p.available.add(spot);
-				if((p[spot.y][spot.x].p.color.equals("Black")))
+				if((p[spot.y][spot.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 				{
 					i = 9;
 					j = -2;
@@ -2523,7 +2631,7 @@ public class ButtonBorder extends JPanel {
 			{
 				//System.out.println(spot.x + " " + spot.y + " " + p[spot.y][spot.x].p.color);
 				s.p.available.add(spot);
-				if((p[spot.y][spot.x].p.color.equals("Black")))
+				if((p[spot.y][spot.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 				{
 					i = -2;
 					j = -2;
@@ -2549,7 +2657,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spotValid);
-				if((p[spotValid.y][spotValid.x].p.color.equals("Black")))
+				if((p[spotValid.y][spotValid.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 				{
 					spot.y = -1;
 				}
@@ -2572,7 +2680,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spotValid);
-				if((p[spotValid.y][spotValid.x].p.color.equals("Black")))
+				if((p[spotValid.y][spotValid.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 				{
 					spot.y = 8;
 				}
@@ -2595,7 +2703,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spotValid);
-				if((p[spotValid.y][spotValid.x].p.color.equals("Black")))
+				if((p[spotValid.y][spotValid.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 				{
 					spot.x = 8;
 				}
@@ -2619,7 +2727,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spotValid);
-				if((p[spotValid.y][spotValid.x].p.color.equals("Black")))
+				if((p[spotValid.y][spotValid.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 				{
 					spot.x = -1;
 				}
@@ -2633,6 +2741,7 @@ public class ButtonBorder extends JPanel {
 		
 		
 	}
+	
 	public void RookPositions(Position s)
 	{
 		Position spot = new Position();
@@ -2649,7 +2758,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spotValid);
-				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
+				if(p[spotValid.y][spotValid.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White"))
 				{
 					spot.y = -1;
 				}
@@ -2672,7 +2781,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spotValid);
-				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
+				if(p[spotValid.y][spotValid.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White"))
 				{
 					spot.y = 8;
 				}
@@ -2695,7 +2804,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spotValid);
-				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
+				if(p[spotValid.y][spotValid.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White"))
 				{
 					spot.x = 8;
 				}
@@ -2718,7 +2827,7 @@ public class ButtonBorder extends JPanel {
 			if(!(p[spotValid.y][spotValid.x].p.color.equals(s.p.color)))
 			{
 				s.p.available.add(spotValid);
-				if(p[spotValid.y][spotValid.x].p.color.equals("Black"))
+				if(p[spotValid.y][spotValid.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White"))
 				{
 					spot.x = -1;
 				}
@@ -2733,6 +2842,7 @@ public class ButtonBorder extends JPanel {
 		
 		
 	}
+	
 	public void BishopPositions(Position s)
 	{
 		Position spot;
@@ -2747,7 +2857,7 @@ public class ButtonBorder extends JPanel {
 				if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
 				{
 					s.p.available.add(spot);
-					if((p[spot.y][spot.x].p.color.equals("Black")))
+					if((p[spot.y][spot.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 					{
 						i = 9;
 						j = 9;
@@ -2770,7 +2880,7 @@ public class ButtonBorder extends JPanel {
 				if(!(p[spot.y][spot.x].p.color.equals(s.p.color)))
 				{
 					s.p.available.add(spot);
-					if((p[spot.y][spot.x].p.color.equals("Black")))
+					if((p[spot.y][spot.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 					{
 						i = -2;
 						j = 9;
@@ -2795,7 +2905,7 @@ public class ButtonBorder extends JPanel {
 				{
 					//System.out.println(i + " " + j + " " + p[spot.y][spot.x].p.color);
 					s.p.available.add(spot);
-					if((p[spot.y][spot.x].p.color.equals("Black")))
+					if((p[spot.y][spot.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 					{
 						i = 9;
 						j = -2;
@@ -2819,7 +2929,7 @@ public class ButtonBorder extends JPanel {
 				{
 					//System.out.println(spot.x + " " + spot.y + " " + p[spot.y][spot.x].p.color);
 					s.p.available.add(spot);
-					if((p[spot.y][spot.x].p.color.equals("Black")))
+					if((p[spot.y][spot.x].p.color.equals("Black") || p[spot.y][spot.x].p.color.equals("White")))
 					{
 						i = -2;
 						j = -2;
@@ -2835,6 +2945,8 @@ public class ButtonBorder extends JPanel {
 
 		
 	}
+	
+	
 	public void KnightPositions(Position s){
 		Position spot;
 		s.p.available = new Vector<Position>();
