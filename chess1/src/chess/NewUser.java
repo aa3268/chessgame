@@ -44,19 +44,20 @@ public class NewUser extends JFrame {
 	 * Create the frame.
 	 */
 	public NewUser() {
-		setBounds(200, 200, 400, 225);
+		setBounds(200, 200, 350, 200);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JButton Cancel = new JButton("Cancel");
+		Cancel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		Cancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				dispose();
 			}
 		});
-		Cancel.setBounds(151, 130, 124, 23);
+		Cancel.setBounds(200, 130, 124, 23);
 		contentPane.add(Cancel);
 		
 		JLabel username = new JLabel("Username");
@@ -91,6 +92,7 @@ public class NewUser extends JFrame {
 		contentPane.add(passwordVField);
 		
 		JButton Submit = new JButton("Submit");
+		Submit.setFont(new Font("Tahoma", Font.BOLD, 11));
 		Submit.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent arg0) {

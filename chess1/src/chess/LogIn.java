@@ -1,7 +1,6 @@
 package chess;
 import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -16,11 +15,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JPasswordField;
 
 /* 
  * Log In Interface
@@ -54,7 +53,7 @@ public class LogIn extends JFrame {
 	 */
 	public LogIn() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 260, 300);
+		setBounds(100, 100, 265, 300);
 		contentPane = new JPanel();
 		contentPane.setBackground(UIManager.getColor("Panel.background"));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -62,24 +61,26 @@ public class LogIn extends JFrame {
 		contentPane.setLayout(null);
 		
 		text = new JTextField();
-		text.setBounds(108, 54, 86, 20);
+		text.setBounds(108, 54, 126, 20);
 		contentPane.add(text);
 		text.setColumns(10);
 		text.setText("");
 		
 		JLabel lblNewLabel = new JLabel("Username");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel.setBounds(10, 57, 88, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Password");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel_1.setBounds(10, 88, 88, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JButton newUserButton = new JButton("Create New User");
 		//newUserButton.setBackground(SystemColor.menu);
-		newUserButton.setFont(new Font("Arial", Font.BOLD, 10));
+		newUserButton.setFont(new Font("Tahoma", Font.BOLD, 11));
 		newUserButton.setBorder(BorderFactory.createEmptyBorder(2,2,2,2));
-		newUserButton.setBounds(52, 227, 140, 23);
+		newUserButton.setBounds(50, 220, 140, 25);
 		newUserButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				NewUser.main(null);
@@ -94,10 +95,11 @@ public class LogIn extends JFrame {
 		
 
 		passwordField = new JPasswordField();
-		passwordField.setBounds(108, 85, 86, 20);
+		passwordField.setBounds(108, 85, 126, 20);
 		contentPane.add(passwordField);
 		
 		JButton login = new JButton("Log In");
+		login.setFont(new Font("Tahoma", Font.BOLD, 11));
 		login.addActionListener(new ActionListener() {
 			Map<String,String> m = new HashMap<String, String>(); //holds username and password
 			@SuppressWarnings({ "static-access", "deprecation" })
@@ -164,7 +166,7 @@ public class LogIn extends JFrame {
 				}
 			}
 		});
-		login.setBounds(71, 117, 92, 23);
+		login.setBounds(75, 120, 90, 25);
 		contentPane.add(login);
 		
 	}
